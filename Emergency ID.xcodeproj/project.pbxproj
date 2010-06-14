@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* EmergencyIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* EmergencyIDAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		B02B41FB1172FE7200D88231 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02B41F91172FE7200D88231 /* SettingsViewController.m */; };
+		B02B41FC1172FE7200D88231 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02B41FA1172FE7200D88231 /* SettingsViewController.xib */; };
+		B02B42161173019400D88231 /* MedicalIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02B42141173019400D88231 /* MedicalIdViewController.m */; };
+		B02B421A1173028600D88231 /* MedicalIdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02B42191173028600D88231 /* MedicalIdTableViewController.m */; };
+		B02B428C1173090100D88231 /* MedicalIdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02B428B1173090000D88231 /* MedicalIdView.xib */; };
+		B02B429B11730BA000D88231 /* MedicalIdDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02B429A11730BA000D88231 /* MedicalIdDetailViewController.xib */; };
+		B03E88601173237D001352FD /* MedicalIdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03E885F1173237D001352FD /* MedicalIdDetailViewController.m */; };
+		B068D6A811B2E4D500C71D6F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B068D6A711B2E4D500C71D6F /* AVFoundation.framework */; };
+		B098773111B2F8FB00C25D73 /* ContactPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B098773011B2F8FB00C25D73 /* ContactPicker.m */; };
+		B098779D11B2FF4F00C25D73 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B098779C11B2FF4F00C25D73 /* AddressBook.framework */; };
+		B09877AB11B3002A00C25D73 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09877AA11B3002A00C25D73 /* AddressBookUI.framework */; };
+		B09ADEDD117B9932002D0624 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ADEDC117B9932002D0624 /* PersonalViewController.m */; };
+		B09ECCB511B5316300F84A1D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B09ECCB411B5316300F84A1D /* libsqlite3.dylib */; };
+		B09ECCB711B531D000F84A1D /* emergencyid.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = B09ECCB611B531D000F84A1D /* emergencyid.sqlite3 */; };
+		B09ECCBA11B533A300F84A1D /* ContactRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ECCB911B533A300F84A1D /* ContactRecord.m */; };
+		B0A712A01172FC170046CFC3 /* 79-medical-bag.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A7129F1172FC170046CFC3 /* 79-medical-bag.png */; };
+		B0A712A21172FC530046CFC3 /* 10-medical.png in Resources */ = {isa = PBXBuildFile; fileRef = B0A712A11172FC530046CFC3 /* 10-medical.png */; };
+		B0EB69D711732610006F17B8 /* SecondLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69D611732610006F17B8 /* SecondLevelViewController.m */; };
+		B0EB69DC11732622006F17B8 /* PersonalDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69D911732622006F17B8 /* PersonalDetailController.m */; };
+		B0EB69DD11732622006F17B8 /* PersonalInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69DA11732622006F17B8 /* PersonalInformation.m */; };
+		B0EB69E21173262D006F17B8 /* EmergencyContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69E01173262D006F17B8 /* EmergencyContact.m */; };
+		B0EB69E31173262D006F17B8 /* EmergencyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69E11173262D006F17B8 /* EmergencyContactController.m */; };
+		B0EB69E611732631006F17B8 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69E411732631006F17B8 /* CameraViewController.m */; };
+		B0EB69E811732644006F17B8 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EB69E711732644006F17B8 /* CameraViewController.xib */; };
+		B0EB6A631173295D006F17B8 /* detailEditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B0EB6A621173295D006F17B8 /* detailEditIcon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* EmergencyIDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyIDAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* EmergencyIDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyIDAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* EmergencyID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmergencyID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* EmergencyID_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyID_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* EmergencyID-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EmergencyID-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		B02B41F81172FE7200D88231 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B02B41F91172FE7200D88231 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B02B41FA1172FE7200D88231 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
+		B02B42131173019400D88231 /* MedicalIdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalIdViewController.h; sourceTree = "<group>"; };
+		B02B42141173019400D88231 /* MedicalIdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalIdViewController.m; sourceTree = "<group>"; };
+		B02B42181173028600D88231 /* MedicalIdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalIdTableViewController.h; sourceTree = "<group>"; };
+		B02B42191173028600D88231 /* MedicalIdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalIdTableViewController.m; sourceTree = "<group>"; };
+		B02B428B1173090000D88231 /* MedicalIdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalIdView.xib; sourceTree = "<group>"; };
+		B02B429A11730BA000D88231 /* MedicalIdDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MedicalIdDetailViewController.xib; path = Classes/MedicalIdDetailViewController.xib; sourceTree = "<group>"; };
+		B03E885E1173237D001352FD /* MedicalIdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalIdDetailViewController.h; sourceTree = "<group>"; };
+		B03E885F1173237D001352FD /* MedicalIdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalIdDetailViewController.m; sourceTree = "<group>"; };
+		B068D6A711B2E4D500C71D6F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B098772F11B2F8FB00C25D73 /* ContactPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPicker.h; sourceTree = "<group>"; };
+		B098773011B2F8FB00C25D73 /* ContactPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPicker.m; sourceTree = "<group>"; };
+		B098779C11B2FF4F00C25D73 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
+		B09877AA11B3002A00C25D73 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		B09ADEDB117B9932002D0624 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		B09ADEDC117B9932002D0624 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		B09ECCB411B5316300F84A1D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B09ECCB611B531D000F84A1D /* emergencyid.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emergencyid.sqlite3; sourceTree = "<group>"; };
+		B09ECCB811B533A300F84A1D /* ContactRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactRecord.h; sourceTree = "<group>"; };
+		B09ECCB911B533A300F84A1D /* ContactRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactRecord.m; sourceTree = "<group>"; };
+		B0A7129F1172FC170046CFC3 /* 79-medical-bag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "79-medical-bag.png"; sourceTree = "<group>"; };
+		B0A712A11172FC530046CFC3 /* 10-medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical.png"; sourceTree = "<group>"; };
+		B0EB69D511732610006F17B8 /* SecondLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondLevelViewController.h; sourceTree = "<group>"; };
+		B0EB69D611732610006F17B8 /* SecondLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondLevelViewController.m; sourceTree = "<group>"; };
+		B0EB69D811732622006F17B8 /* PersonalInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInformation.h; sourceTree = "<group>"; };
+		B0EB69D911732622006F17B8 /* PersonalDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetailController.m; sourceTree = "<group>"; };
+		B0EB69DA11732622006F17B8 /* PersonalInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInformation.m; sourceTree = "<group>"; };
+		B0EB69DB11732622006F17B8 /* PersonalDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailController.h; sourceTree = "<group>"; };
+		B0EB69DE1173262D006F17B8 /* EmergencyContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContact.h; sourceTree = "<group>"; };
+		B0EB69DF1173262D006F17B8 /* EmergencyContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContactController.h; sourceTree = "<group>"; };
+		B0EB69E01173262D006F17B8 /* EmergencyContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContact.m; sourceTree = "<group>"; };
+		B0EB69E11173262D006F17B8 /* EmergencyContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContactController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		B0EB69E411732631006F17B8 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		B0EB69E511732631006F17B8 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		B0EB69E711732644006F17B8 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		B0EB6A621173295D006F17B8 /* detailEditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailEditIcon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				B068D6A811B2E4D500C71D6F /* AVFoundation.framework in Frameworks */,
+				B098779D11B2FF4F00C25D73 /* AddressBook.framework in Frameworks */,
+				B09877AB11B3002A00C25D73 /* AddressBookUI.framework in Frameworks */,
+				B09ECCB511B5316300F84A1D /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* EmergencyIDAppDelegate.h */,
+				1D3623250D0F684500981E51 /* EmergencyIDAppDelegate.m */,
+				B02B42181173028600D88231 /* MedicalIdTableViewController.h */,
+				B02B42191173028600D88231 /* MedicalIdTableViewController.m */,
+				B09ADEDB117B9932002D0624 /* PersonalViewController.h */,
+				B09ADEDC117B9932002D0624 /* PersonalViewController.m */,
+				B0EB69DB11732622006F17B8 /* PersonalDetailController.h */,
+				B0EB69D911732622006F17B8 /* PersonalDetailController.m */,
+				B0EB69DE1173262D006F17B8 /* EmergencyContact.h */,
+				B0EB69E01173262D006F17B8 /* EmergencyContact.m */,
+				B0EB69DF1173262D006F17B8 /* EmergencyContactController.h */,
+				B0EB69E11173262D006F17B8 /* EmergencyContactController.m */,
+				B02B41F81172FE7200D88231 /* SettingsViewController.h */,
+				B02B41F91172FE7200D88231 /* SettingsViewController.m */,
+				B0EB69E411732631006F17B8 /* CameraViewController.m */,
+				B0EB69E511732631006F17B8 /* CameraViewController.h */,
+				B0EB69D511732610006F17B8 /* SecondLevelViewController.h */,
+				B0EB69D611732610006F17B8 /* SecondLevelViewController.m */,
+				B0EB69D811732622006F17B8 /* PersonalInformation.h */,
+				B0EB69DA11732622006F17B8 /* PersonalInformation.m */,
+				B02B42131173019400D88231 /* MedicalIdViewController.h */,
+				B02B42141173019400D88231 /* MedicalIdViewController.m */,
+				B03E885E1173237D001352FD /* MedicalIdDetailViewController.h */,
+				B03E885F1173237D001352FD /* MedicalIdDetailViewController.m */,
+				B098772F11B2F8FB00C25D73 /* ContactPicker.h */,
+				B098773011B2F8FB00C25D73 /* ContactPicker.m */,
+				B09ECCB811B533A300F84A1D /* ContactRecord.h */,
+				B09ECCB911B533A300F84A1D /* ContactRecord.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* EmergencyID.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				B09877AA11B3002A00C25D73 /* AddressBookUI.framework */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* EmergencyID_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B09ECCB611B531D000F84A1D /* emergencyid.sqlite3 */,
+				B0EB6A621173295D006F17B8 /* detailEditIcon.png */,
+				B0EB69E711732644006F17B8 /* CameraViewController.xib */,
+				B02B429A11730BA000D88231 /* MedicalIdDetailViewController.xib */,
+				B02B41FA1172FE7200D88231 /* SettingsViewController.xib */,
+				B0A712A11172FC530046CFC3 /* 10-medical.png */,
+				B0A7129F1172FC170046CFC3 /* 79-medical-bag.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* EmergencyID-Info.plist */,
+				B02B428B1173090000D88231 /* MedicalIdView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B09ECCB411B5316300F84A1D /* libsqlite3.dylib */,
+				B098779C11B2FF4F00C25D73 /* AddressBook.framework */,
+				B068D6A711B2E4D500C71D6F /* AVFoundation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* EmergencyID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "EmergencyID" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmergencyID;
+			productName = EmergencyID;
+			productReference = 1D6058910D05DD3D006BFB54 /* EmergencyID.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Emergency ID" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* EmergencyID */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				B0A712A01172FC170046CFC3 /* 79-medical-bag.png in Resources */,
+				B0A712A21172FC530046CFC3 /* 10-medical.png in Resources */,
+				B02B41FC1172FE7200D88231 /* SettingsViewController.xib in Resources */,
+				B02B428C1173090100D88231 /* MedicalIdView.xib in Resources */,
+				B02B429B11730BA000D88231 /* MedicalIdDetailViewController.xib in Resources */,
+				B0EB69E811732644006F17B8 /* CameraViewController.xib in Resources */,
+				B0EB6A631173295D006F17B8 /* detailEditIcon.png in Resources */,
+				B09ECCB711B531D000F84A1D /* emergencyid.sqlite3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* EmergencyIDAppDelegate.m in Sources */,
+				B02B41FB1172FE7200D88231 /* SettingsViewController.m in Sources */,
+				B02B42161173019400D88231 /* MedicalIdViewController.m in Sources */,
+				B02B421A1173028600D88231 /* MedicalIdTableViewController.m in Sources */,
+				B03E88601173237D001352FD /* MedicalIdDetailViewController.m in Sources */,
+				B0EB69D711732610006F17B8 /* SecondLevelViewController.m in Sources */,
+				B0EB69DC11732622006F17B8 /* PersonalDetailController.m in Sources */,
+				B0EB69DD11732622006F17B8 /* PersonalInformation.m in Sources */,
+				B0EB69E21173262D006F17B8 /* EmergencyContact.m in Sources */,
+				B0EB69E31173262D006F17B8 /* EmergencyContactController.m in Sources */,
+				B0EB69E611732631006F17B8 /* CameraViewController.m in Sources */,
+				B09ADEDD117B9932002D0624 /* PersonalViewController.m in Sources */,
+				B098773111B2F8FB00C25D73 /* ContactPicker.m in Sources */,
+				B09ECCBA11B533A300F84A1D /* ContactRecord.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EmergencyID_Prefix.pch;
+				INFOPLIST_FILE = "EmergencyID-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = EmergencyID;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EmergencyID_Prefix.pch;
+				INFOPLIST_FILE = "EmergencyID-Info.plist";
+				PRODUCT_NAME = EmergencyID;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Roy Martin (36NSTM5QVZ)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A297CAAB-7618-424E-A100-8720A9994BDA";
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "EmergencyID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Emergency ID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
