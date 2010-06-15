@@ -38,13 +38,13 @@
 	IBOutlet UILabel *firstName;
 	IBOutlet UILabel *lastName;
 	
-	
 	// Database variables
 	NSString *databaseName;
 	NSString *databasePath;
 	
 	// Array to store the animal objects
 	NSMutableArray *contacts;
+	NSMutableArray *contactCategories;
 	
 }
 
@@ -56,6 +56,7 @@
 @property (nonatomic, retain) UITextField *textFieldBeingEdited;
 
 @property (nonatomic, retain) NSMutableArray *contacts;
+@property (nonatomic, retain) NSMutableArray *contactCategories;
 
 - (IBAction)showPicker:(id)sender;
 - (IBAction)addNew:(id)sender;

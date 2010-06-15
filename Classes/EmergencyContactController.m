@@ -10,6 +10,7 @@
 #import "EmergencyContactController.h"
 #import "EmergencyContact.h"
 #import "ContactRecord.h"
+#import "ContactCategoryRecord.h"
 
 @implementation EmergencyContactController
 @synthesize emergencycontact;
@@ -20,6 +21,7 @@
 @synthesize firstName;
 @synthesize lastName;
 @synthesize contacts;
+@synthesize	contactCategories;
 
 static sqlite3 *database = nil;
 static sqlite3_stmt *deleteStmt = nil;
@@ -69,8 +71,10 @@ static sqlite3_stmt *stmt = nil;
 		
 		[fileManager release];
 	}
-	
+	//set the filepath to the database
 	NSString *filePath = [self dataFilePath];
+	
+	//Ensure the database exists and that it can be opened
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		//connect to the database and ensure it is setup correctly
 		if(sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK) {
@@ -78,6 +82,9 @@ static sqlite3_stmt *stmt = nil;
 			NSAssert(0, @"Failed to open database");
 		}
 	}
+	
+	//Create the tables if they do not exist
+	
 }
 
 //close the database
@@ -122,6 +129,43 @@ static sqlite3_stmt *stmt = nil;
 	
 	self.contacts = currContacts;
 }
+
+
+-(void) readContactCategoriesFromDatabase {
+	// Setup the database object
+	//sqlite3 *database;
+	
+	// Init the animals Array
+	NSMutableArray *currContactCatgories = [[NSMutableArray alloc] init];
+	
+	// Setup the SQL Statement and compile it for faster access
+	char *query = "SELECT conactCategoryId,title,rank,isReadOnly FROM contactCategories";
+	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
+		// Loop through the results and add them to the feeds array
+		while(sqlite3_step(stmt) == SQLITE_ROW) {
+			// Read the data from the result row
+			NSNumber *currContactCategoryId = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];
+			NSString *currTitle = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
+			NSNumber *currRank = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 2)];
+			NSNumber *currIsReadOnly = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 3)];
+			
+			// Create a new contact object with the data from the database
+			ContactCategoryRecord *category = [[ContactCategoryRecord alloc] initWithName:currContactCategoryId title:currTitle ranking:currRank isReadOnly:currIsReadOnly];
+			
+			// Add the animal object to the animals Array
+			[currContactCatgories addObject:category];
+			
+			[category release];
+		}
+	}else{
+		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
+    }
+	// Release the compiled statement from memory
+	sqlite3_reset(stmt);
+	
+	self.contactCategories = currContactCatgories;
+}
+
 
 -(IBAction)cancel:(id)sender{
 	[self closeDatabase];
@@ -328,12 +372,13 @@ static sqlite3_stmt *stmt = nil;
 	
 	emergencycontact = [[EmergencyContact alloc] init];
 	
-	
 	// Execute the "checkAndCreateDatabase" function
 	[self checkAndCreateDatabase];
 	
 	// Query the database for all animal records and construct the "animals" array
 	[self readContactsFromDatabase];
+	
+	[self readContactCategoriesFromDatabase];
 	
 	/*
 	NSString *filePath = [self dataFilePath];
@@ -419,14 +464,14 @@ target:self
                              PersonalCellIdentifier];
     if (cell == nil) {
         
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
                                        reuseIdentifier:PersonalCellIdentifier] autorelease];
         UILabel *label = [[UILabel alloc] initWithFrame:
                           CGRectMake(10, 10, 75, 25)];
         label.textAlignment = UITextAlignmentRight;
         label.tag = kLabelTag;
         label.font = [UIFont boldSystemFontOfSize:14];
-        [cell.contentView addSubview:label];
+      //  [cell.contentView addSubview:label];
         [label release];
         
         
@@ -437,7 +482,9 @@ target:self
         [textField addTarget:self 
                       action:@selector(textFieldDone:) 
             forControlEvents:UIControlEventEditingDidEndOnExit];
-        [cell.contentView addSubview:textField];
+    //    [cell.contentView addSubview:textField];
+		
+	
     }
     
 	NSUInteger row = [indexPath row];
@@ -447,6 +494,10 @@ target:self
 	NSNumber *currContactId = [currContact valueForKey:@"contactId"]; // works fine
 	NSString *currFirstName = [currContact valueForKey:@"firstName"]; // works fine
 	NSString *currLastName = [currContact valueForKey:@"lastName"];
+	
+	
+	cell.textLabel.text = (@"%s %s", currFirstName, currLastName);
+	cell.detailTextLabel.text = @"smaller text goes here";
 	
     // increment the row by the section that it's in
 	row = row + (section * 4);
@@ -521,6 +572,7 @@ target:self
 #pragma mark -
 #pragma mark Table View Data Source Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+	//return [self.contacts count];
 	return 2;
 }
 
