@@ -83,8 +83,23 @@ static sqlite3_stmt *stmt = nil;
 		}
 	}
 	
-	//Create the tables if they do not exist
+	char *errorMsg;
 	
+	
+	//Create the table for contact if they do not exist
+	NSString *createSQL = @"CREATE TABLE IF NOT EXISTS contact ( contactId Integer PRIMARY KEY NOT NULL, contactCategoryId Integer NOT NULL, userId Integer NULL, firstName Varchar NULL, lastName Varchar NULL, phone Varchar NULL, image Varchar NULL);";
+	if(sqlite3_exec(database, [createSQL UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
+		sqlite3_close(database);
+		NSAssert1(0, @"Error creating table: %s", errorMsg);
+	}
+	
+	//Create the table for contact category if they do not exist
+	createSQL = @"CREATE TABLE IF NOT EXISTS contactCategory (contactCategoryId Integer PRIMARY KEY NOT NULL, title varchar NOT NULL, rank Integer NOT NULL DEFAULT '0', isReadOnly Integer NOT NULL DEFAULT '0');";
+	if(sqlite3_exec(database, [createSQL UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
+		sqlite3_close(database);
+		NSAssert1(0, @"Error creating table: %s", errorMsg);
+	}
+	 
 }
 
 //close the database
@@ -139,7 +154,7 @@ static sqlite3_stmt *stmt = nil;
 	NSMutableArray *currContactCatgories = [[NSMutableArray alloc] init];
 	
 	// Setup the SQL Statement and compile it for faster access
-	char *query = "SELECT conactCategoryId,title,rank,isReadOnly FROM contactCategories";
+	char *query = "SELECT contactCategoryId,title,rank,isReadOnly FROM contactCategory ORDER BY rank";
 	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
 		// Loop through the results and add them to the feeds array
 		while(sqlite3_step(stmt) == SQLITE_ROW) {
@@ -224,13 +239,14 @@ static sqlite3_stmt *stmt = nil;
 	currfirstName = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty); 
 	currlastName = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
 	
-	char *query = "INSERT OR REPLACE INTO contact(contactId,userId,firstName,lastName) VALUES (?, ?, ?, ?);";
+	char *query = "INSERT OR REPLACE INTO contact(contactId,contactCategoryId,userId,firstName,lastName) VALUES (?, ?, ?, ?, ?);";
 	
 	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
 		sqlite3_bind_int(stmt, 1, [personIDAsNumber intValue]);
 		sqlite3_bind_int(stmt, 2, 1);
-		sqlite3_bind_text(stmt, 3, [currfirstName UTF8String], -1, NULL);
-		sqlite3_bind_text(stmt, 4, [currlastName UTF8String], -1, NULL);
+		sqlite3_bind_int(stmt, 3, 1);
+		sqlite3_bind_text(stmt, 4, [currfirstName UTF8String], -1, NULL);
+		sqlite3_bind_text(stmt, 5, [currlastName UTF8String], -1, NULL);
 		
 	}else{
 		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
@@ -241,6 +257,9 @@ static sqlite3_stmt *stmt = nil;
 	}
 	// Release the compiled statement from memory
 	sqlite3_reset(stmt);
+	
+	//load the new contacts into memory
+	[self readContactsFromDatabase];
 	
 	[self dismissModalViewControllerAnimated:YES]; 
 }
@@ -380,31 +399,7 @@ static sqlite3_stmt *stmt = nil;
 	
 	[self readContactCategoriesFromDatabase];
 	
-	/*
-	NSString *filePath = [self dataFilePath];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-        NSData *data = [[NSMutableData alloc]
-                        initWithContentsOfFile:[self dataFilePath]];
-        NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] 
-                                         initForReadingWithData:data];
-        EmergencyContact *loademergencycontact = [unarchiver decodeObjectForKey:kContactDataKey];
-        [unarchiver finishDecoding];
-		
-		emergencycontact.name = loademergencycontact.name;
-		emergencycontact.phone = loademergencycontact.phone;
-		emergencycontact.relationship = loademergencycontact.relationship;
-		emergencycontact.other = loademergencycontact.other;
-		
-		emergencycontact.name2 = loademergencycontact.name2;
-		emergencycontact.phone2 = loademergencycontact.phone2;
-		emergencycontact.relationship2 = loademergencycontact.relationship2;
-		emergencycontact.other2 = loademergencycontact.other2;
-        
-        [unarchiver release];
-        [data release];
-		
-    }
-    */
+	
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
                                      initWithTitle:@"Cancel"
                                      style:UIBarButtonItemStylePlain
@@ -451,7 +446,7 @@ target:self
 #pragma mark Table Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView 
  numberOfRowsInSection:(NSInteger)section {
-    return kNumberOfEditableRows;
+    return [self.contacts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
@@ -489,107 +484,40 @@ target:self
     
 	NSUInteger row = [indexPath row];
 	
-	
 	NSArray *currContact = [contacts objectAtIndex:section]; // can change index and it's fine
 	NSNumber *currContactId = [currContact valueForKey:@"contactId"]; // works fine
 	NSString *currFirstName = [currContact valueForKey:@"firstName"]; // works fine
 	NSString *currLastName = [currContact valueForKey:@"lastName"];
 	
-	
-	cell.textLabel.text = (@"%s %s", currFirstName, currLastName);
-	cell.detailTextLabel.text = @"smaller text goes here";
-	
-    // increment the row by the section that it's in
-	row = row + (section * 4);
+	cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", currFirstName, currLastName];
+	cell.detailTextLabel.text = @"555-555-5555";
 	    
-    UILabel *label = (UILabel *)[cell viewWithTag:kLabelTag];
-    UITextField *textField = nil;
-    for (UIView *oneView in cell.contentView.subviews)
-    {
-        if ([oneView isMemberOfClass:[UITextField class]])
-            textField = (UITextField *)oneView;
-    }
-    label.text = [fieldLabels objectAtIndex:row];
-    NSNumber *rowAsNum = [[NSNumber alloc] initWithInt:row];
-    switch (row) {
-        case kNameRowIndex:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = currContactId;
-            break;
-        case kPhoneRowIndex:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = currFirstName;
-            break;
-        case kRelationshipRowIndex:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = currLastName;
-            break;
-        case kOtherRowIndex:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = emergencycontact.other;
-			break;
-        case kNameRow2Index:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = emergencycontact.name2;
-            break;
-        case kPhoneRow2Index:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = emergencycontact.phone2;
-            break;
-        case kRelationshipRow2Index:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = emergencycontact.relationship2;
-            break;
-        case kOtherRow2Index:
-            if ([[tempValues allKeys] containsObject:rowAsNum])
-                textField.text = [tempValues objectForKey:rowAsNum];
-            else
-                textField.text = emergencycontact.other2;
-        default:
-            break;
-    }
-    if (textFieldBeingEdited == textField)
-        textFieldBeingEdited = nil;
     
-    textField.tag = row;
-    [rowAsNum release];
-    return cell;
+	return cell;
 }
 #pragma mark -
 #pragma mark Table View Data Source Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+	return [self.contactCategories count];
 	//return [self.contacts count];
-	return 2;
+	
+	//return 0;
 }
 
 #pragma mark -
 #pragma mark Table Delegate Methods
 - (NSIndexPath *)tableView:(UITableView *)tableView 
   willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+   
+	return nil;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView 
    titleForHeaderInSection:(NSInteger)section {
-	if(section == 0){
-		return @"Primary Contact";
-	}else{
-		return @"Secondary Contact";
-	}
+	NSArray *currContactCategory = [contactCategories objectAtIndex:section]; // can change index and it's fine
+	NSString *currCatTitle = [currContactCategory valueForKey:@"title"]; // works fine
+	
+	return currCatTitle;
 }
 
 #pragma mark Text Field Delegate Methods

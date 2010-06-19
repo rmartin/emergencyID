@@ -34,7 +34,7 @@
 		</data>
 		<key>SettingsViewController.nib</key>
 		<data>
-		jFDSVCr1nvc3iuuZ3Rp7PWupgr0=
+		AZn+Vap4Fsdq1S2EwMfaBEx5NGc=
 		</data>
 		<key>detailEditIcon.png</key>
 		<data>
@@ -43,6 +43,10 @@
 		<key>embedded.mobileprovision</key>
 		<data>
 		VMcj1k1v3sYSLIsQzK/JvYXk+o0=
+		</data>
+		<key>emergencyid.sqlite3</key>
+		<data>
+		WoeUV2MkdS32P9wfdPdw5bUkGwg=
 		</data>
 	</dict>
 	<key>rules</key>
