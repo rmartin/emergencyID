@@ -154,7 +154,7 @@ static sqlite3_stmt *stmt = nil;
 	NSMutableArray *currContactCatgories = [[NSMutableArray alloc] init];
 	
 	// Setup the SQL Statement and compile it for faster access
-	char *query = "SELECT contactCategoryId,title,rank,isReadOnly FROM contactCategory ORDER BY rank";
+	char *query = "SELECT contactCategoryId, title, rank, isReadOnly FROM contactCategory";
 	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
 		// Loop through the results and add them to the feeds array
 		while(sqlite3_step(stmt) == SQLITE_ROW) {
@@ -179,6 +179,45 @@ static sqlite3_stmt *stmt = nil;
 	sqlite3_reset(stmt);
 	
 	self.contactCategories = currContactCatgories;
+}
+
+-(void) readContactCategoriesByCategoryFromDatabase:(NSString *)contactCategoryId{
+	// Setup the database object
+	//sqlite3 *database;
+	
+	// Init the animals Array
+	NSMutableArray *currContacts = [[NSMutableArray alloc] init];
+	
+	// Setup the SQL Statement and compile it for faster access
+	//char *query = "SELECT contactId,firstName,lastName FROM contact WHERE contactCategoryId = '?'";
+	
+	const char *query = [[NSString stringWithFormat:@"SELECT contactId,firstName,lastName FROM contact WHERE contactCategoryId = '%@'",contactCategoryId] cStringUsingEncoding:NSUTF8StringEncoding];
+	
+	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
+	
+		// Loop through the results and add them to the feeds array
+		while(sqlite3_step(stmt) == SQLITE_ROW) {
+			// Read the data from the result row
+			NSNumber *aContactId = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];
+			NSString *aFirstName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
+			NSString *aLastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 2)];
+			
+			// Create a new contact object with the data from the database
+			ContactRecord *contact = [[ContactRecord alloc] initWithName:aContactId firstName:aFirstName lastName:aLastName];
+			
+			
+			// Add the animal object to the animals Array
+			[currContacts addObject:contact];
+			
+			[contact release];
+		}
+	}else{
+		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
+    }
+	// Release the compiled statement from memory
+	sqlite3_reset(stmt);
+	
+	self.contacts = currContacts;
 }
 
 
@@ -446,6 +485,14 @@ target:self
 #pragma mark Table Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView 
  numberOfRowsInSection:(NSInteger)section {
+	
+	//get the current category
+	NSArray *currContactCategory = [contactCategories objectAtIndex:section]; // can change index and it's fine
+	NSString *currCatCategoryId = [currContactCategory valueForKey:@"contactCategoryId"]; // works fine
+	
+	[self readContactCategoriesByCategoryFromDatabase:currCatCategoryId];
+	
+	
     return [self.contacts count];
 }
 
@@ -453,10 +500,23 @@ target:self
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *PersonalCellIdentifier = @"PersonalCellIdentifier";
+	
+	
 	NSUInteger section = [indexPath section];
     
+	//get the current category
+	NSArray *currContactCategory = [contactCategories objectAtIndex:section]; // can change index and it's fine
+	NSString *currCatCategoryId = [currContactCategory valueForKey:@"contactCategoryId"]; // works fine
+	
+	[self readContactCategoriesByCategoryFromDatabase:currCatCategoryId];
+	
+	
+	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                              PersonalCellIdentifier];
+	
+	
+		
     if (cell == nil) {
         
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
@@ -481,6 +541,12 @@ target:self
 		
 	
     }
+	
+	
+	//if there are no contacts, then remove then break;
+	if([self.contacts count] == 0){
+		return cell;
+	}
     
 	NSUInteger row = [indexPath row];
 	
