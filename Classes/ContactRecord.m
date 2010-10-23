@@ -9,12 +9,13 @@
 #import "ContactRecord.h"
 
 @implementation ContactRecord
-@synthesize contactId, firstName, lastName;
+@synthesize contactId, firstName, lastName, primaryPhoneNumber;
 
--(id)initWithName:(NSString *)cid firstName:(NSString *)fName lastName:(NSString *)lName {
+-(id)initWithName:(NSNumber *)cid firstName:(NSString *)fName lastName:(NSString *)lName primaryPhoneNumber:(NSString *)pNumber{
 	self.contactId = cid;
 	self.firstName = fName;
 	self.lastName = lName;
+	self.primaryPhoneNumber = pNumber;
 	return self;
 }
 @end

@@ -54,6 +54,8 @@
 @property (nonatomic, retain) NSArray *fieldLabels;
 @property (nonatomic, retain) NSMutableDictionary *tempValues;
 @property (nonatomic, retain) UITextField *textFieldBeingEdited;
+@property (nonatomic, retain) NSFileManager *fileManager;
+
 
 @property (nonatomic, retain) NSMutableArray *contacts;
 @property (nonatomic, retain) NSMutableArray *contactCategories;

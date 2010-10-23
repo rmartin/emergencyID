@@ -1,0 +1,140 @@
+TEmergencyID
+v7
+r1
+cCheck dependencies
+
+N/Users/roy/Documents/Emergency ID/10-medical.png
+c000000004972416400000000000000D2
+t1232224612
+s210
+
+N/Users/roy/Documents/Emergency ID/79-medical-bag.png
+c000000004A1A2ACE000000000000010A
+t1243228878
+s266
+
+N/Users/roy/Documents/Emergency ID/CameraViewController.xib
+c000000004BA694320000000000003D78
+t1269208114
+s15736
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib
+c000000004BC2EC380000000000001CD6
+t1271065656
+s7382
+
+N/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib
+c000000004C02CF0A0000000000002CE2
+t1275252490
+s11490
+
+N/Users/roy/Documents/Emergency ID/MainWindow.xib
+c000000004BC2F58400000000000040E4
+t1271068036
+s16612
+
+N/Users/roy/Documents/Emergency ID/MedicalIdView.xib
+c000000004BC2D25B0000000000001FA4
+t1271059035
+s8100
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app
+t1276932399
+s612
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/10-medical.png
+t1272532723
+s219
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/79-medical-bag.png
+t1272532723
+s271
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/CameraViewController.nib
+t1272532726
+s3503
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/Info.plist
+t1272532722
+s646
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/MainWindow.nib
+t1272532723
+s3316
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/MedicalIdDetailViewController.nib
+t1272532726
+s1651
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/MedicalIdView.nib
+t1272532725
+s1497
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/PkgInfo
+t1272532722
+s8
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/SettingsViewController.nib
+t1276932396
+s3094
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/detailEditIcon.png
+t1272532726
+s3328
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/emergencyid.sqlite3
+t1276932396
+s8192
+
+N/Users/roy/Documents/Emergency ID/detailEditIcon.png
+c0000000049EF82010000000000000CAD
+t1240433153
+s3245
+
+N/Users/roy/Documents/Emergency ID/emergencyid.sqlite3
+c000000004C15B8380000000000002000
+t1276491832
+s8192
+
+NEmergencyID-Info.plist
+c000000004BC29C99000000000000038D
+t1271045273
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies304563824#304563824#0(68"[BEROR]error: There is no SDK with the name or path 'iphoneos3.1.3'1(4@60"error: There is no SDK with the name or path 'iphoneos3.1.3'304563824#18446744073709551615#0#0(1@0"0(0#1#0"32651522506817640#0"0#
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/CameraViewController.xib"
+r0
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib"
+r0
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib"
+r0
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/MainWindow.xib"
+r0
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/MedicalIdView.xib"
+r0
+
+CCopyPNGFile "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/10-medical.png" 10-medical.png
+r0
+
+CCopyPNGFile "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/79-medical-bag.png" 79-medical-bag.png
+r0
+
+CCopyPNGFile "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/detailEditIcon.png" detailEditIcon.png
+r0
+
+CCpResource build/Debug-iphoneos/EmergencyID.app/emergencyid.sqlite3 emergencyid.sqlite3
+r0
+
+CProcessInfoPlistFile "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/Info.plist" EmergencyID-Info.plist
+r0
+
+CTouch "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app"
+r0
+

@@ -39,9 +39,9 @@
 		
     [self.navigationController popViewControllerAnimated:YES];
     
-    NSArray *allControllers = self.navigationController.viewControllers;
-    UITableViewController *parent = [allControllers lastObject];
-    [parent.tableView reloadData];
+ //   NSArray *allControllers = self.navigationController.viewControllers;
+ //   UITableViewController *parent = [allControllers lastObject];
+ //   [parent.tableView reloadData];
 }
 
 #pragma mark -

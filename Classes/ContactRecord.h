@@ -14,12 +14,14 @@
 	NSNumber *contactId;
 	NSString *firstName;
 	NSString *lastName;
+	NSString *primaryPhoneNumber;
 }
 
 @property (nonatomic, retain) NSNumber *contactId;
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *lastName;
+@property (nonatomic, retain) NSString *primaryPhoneNumber;
 
--(id)initWithName:(NSNumber *)cid description:(NSString *)f url:(NSString *)l;
+-(id)initWithName:(NSNumber *)cid firstName:(NSString *)fName lastName:(NSString *)lName primaryPhoneNumber:(NSString *)pNumber;
 
 @end

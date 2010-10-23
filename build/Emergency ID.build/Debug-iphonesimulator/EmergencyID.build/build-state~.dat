@@ -1,0 +1,914 @@
+TEmergencyID
+v7
+r0
+t304982931.574507
+cCheck dependencies
+cProcessInfoPlistFile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/Info.plist" EmergencyID-Info.plist
+cCompileXIB "/Users/roy/Documents/Emergency ID/MainWindow.xib"
+cCpResource build/Debug-iphonesimulator/EmergencyID.app/79-medical-bag.png 79-medical-bag.png
+cCpResource build/Debug-iphonesimulator/EmergencyID.app/10-medical.png 10-medical.png
+cCompileXIB "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib"
+cCompileXIB "/Users/roy/Documents/Emergency ID/MedicalIdView.xib"
+cCompileXIB "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib"
+cCompileXIB "/Users/roy/Documents/Emergency ID/CameraViewController.xib"
+cCpResource build/Debug-iphonesimulator/EmergencyID.app/detailEditIcon.png detailEditIcon.png
+cCpResource build/Debug-iphonesimulator/EmergencyID.app/emergencyid.sqlite3 emergencyid.sqlite3
+cProcessPCH /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch.gch EmergencyID_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/main.o" "/Users/roy/Documents/Emergency ID/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyIDAppDelegate.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SettingsViewController.o" "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdTableViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdDetailViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SecondLevelViewController.o" "/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalDetailController.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalInformation.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContact.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContactController.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/CameraViewController.o" "/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalViewController.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactPicker.o" "/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactRecord.o" "/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactCategoryRecord.o" "/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID" normal i386
+cGenerateDSYMFile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app.dSYM" "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID"
+cTouch "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004C7D61190000000000000132
+t1283285273
+s306
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000004C01F5AE00000000000C05A0
+t1275196846
+s787872
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/AddressBook.framework/Headers/AddressBook.h
+c000000004BFF3B830000000000000424
+t1275018115
+s1060
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c000000004C04722E0000000000147690
+t1275359790
+s1341072
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/AddressBookUI.framework/Headers/AddressBookUI.h
+c000000004C0472220000000000000202
+t1275359778
+s514
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BFDFE39000000000027C7D0
+t1274936889
+s2607056
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFDFE7C000000000029D5D0
+t1274936956
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFDFE6E0000000000001466
+t1274936942
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C0470BB00000000000009CD
+t1275359419
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0471620000000001D47210
+t1275359586
+s30700048
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/sqlite3.h
+c000000004BFDF9FB0000000000041A6F
+t1274935803
+s268911
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/lib/libsqlite3.dylib
+c000000004BFDFA0A0000000000079480
+t1274935818
+s496768
+
+N/System/Library/Frameworks/AddressBook.framework/AddressBook
+c000000004B73D1F9000000000094DDA0
+t1265881593
+s9756064
+
+N/Users/roy/Documents/Emergency ID/10-medical.png
+c000000004972416400000000000000D2
+t1232224612
+s210
+
+N/Users/roy/Documents/Emergency ID/79-medical-bag.png
+c000000004A1A2ACE000000000000010A
+t1243228878
+s266
+
+N/Users/roy/Documents/Emergency ID/CameraViewController.xib
+c000000004BA694320000000000003D78
+t1269208114
+s15736
+
+N/Users/roy/Documents/Emergency ID/Classes/CameraViewController.h
+c000000004BA689EE0000000000000320
+t1269205486
+s800
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m
+c000000004BC18745000000000000165B
+t1270974277
+s5723
+i"CameraViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.h
+c000000004C15BF8D00000000000002A6
+t1276493709
+s678
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m
+c000000004C15BF7F0000000000000203
+t1276493695
+s515
+i"ContactCategoryRecord.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/ContactPicker.h
+c000000004C02C6F70000000000000237
+t1275250423
+s567
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+i<AddressBook/AddressBook.h>
+i<AddressBookUI/AddressBookUI.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m
+c000000004C02CD6D0000000000000674
+t1275252077
+s1652
+i"ContactPicker.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/ContactRecord.h
+c000000004C04FD310000000000000223
+t1275395377
+s547
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m
+c000000004C11C6AA00000000000001AD
+t1276233386
+s429
+i"ContactRecord.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.h
+c000000004BB4C0BC00000000000004C5
+t1270137020
+s1221
+i<Foundation/Foundation.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m
+c000000004BB4C0950000000000000A5B
+t1270136981
+s2651
+i"EmergencyContact.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h
+c000000004C15B9BA0000000000000838
+t1276492218
+s2104
+i<uiKit/UIKit.h>
+i<AddressBook/AddressBook.h>
+i<AddressBookUI/AddressBookUI.h>
+i"SecondLevelViewController.h"
+i<sqlite3.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m
+c000000004C1EBF650000000000005473
+t1277083493
+s21619
+i"EmergencyContactController.h"
+i"EmergencyContact.h"
+i"ContactRecord.h"
+i"ContactCategoryRecord.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.h
+c000000004BC2F085000000000000026C
+t1271066757
+s620
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m
+c000000004BC2F08E00000000000002A0
+t1271066766
+s672
+i"MedicalIdViewController.h"
+i"EmergencyIDAppDelegate.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.h
+c000000004BC2EBFD0000000000000101
+t1271065597
+s257
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m
+c000000004BC2EBFD000000000000060E
+t1271065597
+s1550
+i"MedicalIdDetailViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib
+c000000004BC2EC380000000000001CD6
+t1271065656
+s7382
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.h
+c000000004BC2F0DD00000000000002F5
+t1271066845
+s757
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m
+c000000004C02AC3F000000000000143D
+t1275243583
+s5181
+i"MedicalIdTableViewController.h"
+i"MedicalIdDetailViewController.h"
+i"MedicalIdViewController.h"
+i"EmergencyIDAppDelegate.h"
+i"SecondLevelViewController.h"
+i"PersonalDetailController.h"
+i"EmergencyContactController.h"
+i"CameraViewController.h"
+i"PersonalViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.h
+c000000004BC2CE450000000000000100
+t1271057989
+s256
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m
+c000000004BC2CA14000000000000058D
+t1271056916
+s1421
+i"MedicalIdViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.h
+c000000004BD37F1400000000000004CB
+t1272151828
+s1227
+i<uiKit/UIKit.h>
+i"SecondLevelViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m
+c000000004BD39749000000000000260E
+t1272158025
+s9742
+i"PersonalDetailController.h"
+i"PersonalInformation.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.h
+c000000004BD37E600000000000000637
+t1272151648
+s1591
+
+N/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m
+c000000004BD37E930000000000000D8C
+t1272151699
+s3468
+i"PersonalInformation.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.h
+c000000004BD37F0A0000000000000639
+t1272151818
+s1593
+i<UIKit/UIKit.h>
+i"SecondLevelViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m
+c000000004C02CFC70000000000002E62
+t1275252679
+s11874
+i"PersonalViewController.h"
+i"PersonalInformation.h"
+i"PersonalDetailController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.h
+c000000004B9DB1D40000000000000143
+t1268625876
+s323
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m
+c000000004B9DAFDA0000000000000109
+t1268625370
+s265
+i"SecondLevelViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.h
+c000000004C02CCDD0000000000000238
+t1275251933
+s568
+i<UIKit/UIKit.h>
+i<AddressBook/AddressBook.h>
+i<AddressBookUI/AddressBookUI.h>
+
+N/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m
+c000000004C02CCE10000000000000711
+t1275251937
+s1809
+i"SettingsViewController.h"
+
+N/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib
+c000000004C02CF0A0000000000002CE2
+t1275252490
+s11490
+
+N/Users/roy/Documents/Emergency ID/EmergencyID_Prefix.pch
+c000000004BC29C9900000000000000CB
+t1271045273
+s203
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/roy/Documents/Emergency ID/MainWindow.xib
+c000000004BC2F58400000000000040E4
+t1271068036
+s16612
+
+N/Users/roy/Documents/Emergency ID/MedicalIdView.xib
+c000000004BC2D25B0000000000001FA4
+t1271059035
+s8100
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app
+t1283290131
+s476
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app.dSYM
+t1283290131
+s102
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/10-medical.png
+t1283290119
+s210
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/79-medical-bag.png
+t1283290119
+s266
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/CameraViewController.nib
+t1283290122
+s2159
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID
+t1283290131
+s136384
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/Info.plist
+t1283290117
+s607
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/MainWindow.nib
+t1283290119
+s2173
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/MedicalIdDetailViewController.nib
+t1283290121
+s1174
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/MedicalIdView.nib
+t1283290120
+s1063
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/PkgInfo
+t1283290117
+s8
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/SettingsViewController.nib
+t1283290120
+s1944
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/detailEditIcon.png
+t1283290122
+s3245
+
+N/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/emergencyid.sqlite3
+t1283290122
+s8192
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/CameraViewController.o
+t1283290129
+s62960
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactCategoryRecord.o
+t1283290131
+s11780
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactPicker.o
+t1283290130
+s45420
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactRecord.o
+t1283290130
+s10184
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContact.o
+t1283290128
+s23060
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContactController.o
+t1283290129
+s97744
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyID.LinkFileList
+c000000004C1C72F100000000000008E7
+t1276932849
+s2279
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyIDAppDelegate.o
+t1283290126
+s49396
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdDetailViewController.o
+t1283290127
+s34556
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdTableViewController.o
+t1283290127
+s48624
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdViewController.o
+t1283290126
+s36096
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalDetailController.o
+t1283290128
+s67036
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalInformation.o
+t1283290128
+s28584
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalViewController.o
+t1283290130
+s79084
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SecondLevelViewController.o
+t1283290127
+s34504
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SettingsViewController.o
+t1283290126
+s46404
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/main.o
+t1283290125
+s6292
+
+N/Users/roy/Documents/Emergency ID/detailEditIcon.png
+c0000000049EF82010000000000000CAD
+t1240433153
+s3245
+
+N/Users/roy/Documents/Emergency ID/emergencyid.sqlite3
+c000000004C15B8380000000000002000
+t1276491832
+s8192
+
+N/Users/roy/Documents/Emergency ID/main.m
+c000000004BC29C990000000000000171
+t1271045273
+s369
+i<UIKit/UIKit.h>
+
+N/var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch.gch
+t1283290123
+s15232016
+
+NEmergencyID-Info.plist
+c000000004BC29C99000000000000038D
+t1271045273
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies304982917#304982917#0(0"0(0#1#0"8608216096#0"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/CameraViewController.o" "/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982929.218129
+e304982929.593812
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/CameraViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m: In function '-[CameraViewController getCameraPicture:]':
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:72: warning: 'setAllowsImageEditing:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImagePickerController.h:108)
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m: In function '-[CameraViewController imagePickerController:didFinishPickingImage:editingInfo:]':
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: 'CameraViewController' may not respond to '-addText:text:primaryContact:secondaryContact:'
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: (Messages without a matching method signature
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: will be assumed to return 'id' and accept
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: '...' as arguments.)
+o/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:110: warning: unused variable 'imgView'
+lSLF07#2@72"Compile /Users/roy/Documents/Emergency ID/Classes/CameraViewController.m304982929#304982929#0(1201"/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m: In function '-[CameraViewController getCameraPicture:]':/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:72: warning: 'setAllowsImageEditing:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImagePickerController.h:108)/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m: In function '-[CameraViewController imagePickerController:didFinishPickingImage:editingInfo:]':/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: 'CameraViewController' may not respond to '-addText:text:primaryContact:secondaryContact:'/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: (Messages without a matching method signature/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: will be assumed to return 'id' and accept/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:108: warning: '...' as arguments.)/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m:110: warning: unused variable 'imgView'4(22@216"'setAllowsImageEditing:' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIImagePickerController.h:108)304982929#123#295#0(6@64"/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m292667077#72#0#72#0#33"'*' is deprecated (declared at *)0(22@90"'CameraViewController' may not respond to '-addText:text:primaryContact:secondaryContact:'304982929#580#170#0(6@64"/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m292667077#108#0#108#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)304982929#750#125#0(6@64"/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m292667077#108#0#108#0#0"0(22@25"Unused variable 'imgView'304982929#1096#105#0(6@64"/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m292667077#110#0#110#0#19"unused variable '*'0(0#0#64"/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m8599053888#1995"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/CameraViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactCategoryRecord.o" "/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982930.958113
+e304982931.211228
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactCategoryRecord.o
+x/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m: In function '-[ContactCategoryRecord initWithName:title:ranking:isReadOnly:]':
+o/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:14: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSNumber *'
+o/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:14: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSNumber *'
+o/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:15: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setContactCategoryId:' from distinct Objective-C type
+o/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:17: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setRanking:' from distinct Objective-C type
+lSLF07#2@73"Compile /Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m304982930#304982931#0(966"/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m: In function '-[ContactCategoryRecord initWithName:title:ranking:isReadOnly:]':/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:14: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSNumber *'/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:14: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSNumber *'/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:15: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setContactCategoryId:' from distinct Objective-C type/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m:17: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setRanking:' from distinct Objective-C type4(22@93"Incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSNumber *'304982931#146#173#0(6@65"/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m298186495#14#0#14#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@93"Incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSNumber *'304982931#319#173#0(6@65"/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m298186495#14#0#14#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@162"Incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setContactCategoryId:' from distinct Objective-C type304982931#492#242#0(6@65"/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m298186495#15#0#15#0#0"0(22@152"Incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setRanking:' from distinct Objective-C type304982931#734#232#0(6@65"/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m298186495#17#0#17#0#0"0(0#0#65"/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m8612658016#1997"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactCategoryRecord.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactPicker.o" "/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982930.421685
+e304982930.708258
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactPicker.o
+x/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m: In function '-[ContactPicker showPicker:]':
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: 'ContactPicker' may not respond to '-presentModalViewController:animated:'
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: (Messages without a matching method signature
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: will be assumed to return 'id' and accept
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: '...' as arguments.)
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:23: warning: 'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m: In function '-[ContactPicker peoplePickerNavigationControllerDidCancel:]':
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:28: warning: 'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m: In function '-[ContactPicker peoplePickerNavigationController:shouldContinueAfterSelectingPerson:]':
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:39: warning: 'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'
+o/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:32: warning: unused variable 'multi'
+lSLF07#2@65"Compile /Users/roy/Documents/Emergency ID/Classes/ContactPicker.m304982930#304982930#0(1395"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m: In function '-[ContactPicker showPicker:]':/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: 'ContactPicker' may not respond to '-presentModalViewController:animated:'/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: (Messages without a matching method signature/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: will be assumed to return 'id' and accept/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:20: warning: '...' as arguments.)/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:23: warning: 'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m: In function '-[ContactPicker peoplePickerNavigationControllerDidCancel:]':/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:28: warning: 'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m: In function '-[ContactPicker peoplePickerNavigationController:shouldContinueAfterSelectingPerson:]':/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:39: warning: 'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m:32: warning: unused variable 'multi'6(22@74"'ContactPicker' may not respond to '-presentModalViewController:animated:'304982930#103#146#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m296944877#20#0#20#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)304982930#249#117#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m296944877#20#0#20#0#0"0(22@73"'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'304982930#571#145#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m296944877#23#0#23#0#26"'*' may not respond to '*'0(22@73"'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'304982930#850#145#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m296944877#28#0#28#0#26"'*' may not respond to '*'0(22@73"'ContactPicker' may not respond to '-dismissModalViewControllerAnimated:'304982930#1155#145#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m296944877#39#0#39#0#26"'*' may not respond to '*'0(22@23"Unused variable 'multi'304982930#1300#95#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m296944877#32#0#32#0#19"unused variable '*'0(0#0#57"/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m8612717216#1981"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/ContactPicker.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactPicker.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactRecord.o" "/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982930.708375
+e304982930.957923
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactRecord.o
+x/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m: In function '-[ContactRecord initWithName:firstName:lastName:]':
+o/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m:15: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setContactId:' from distinct Objective-C type
+o/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m: At top level:
+o/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m:20: warning: incomplete implementation of class 'ContactRecord'
+o/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m:20: warning: method definition for '-initWithName:description:url:' not found
+lSLF07#2@65"Compile /Users/roy/Documents/Emergency ID/Classes/ContactRecord.m304982930#304982930#0(681"/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m: In function '-[ContactRecord initWithName:firstName:lastName:]':/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m:15: warning: incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setContactId:' from distinct Objective-C type/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m: At top level:/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m:20: warning: incomplete implementation of class 'ContactRecord'/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m:20: warning: method definition for '-initWithName:description:url:' not found4(22@154"Incompatible Objective-C types 'struct NSString *', expected 'struct NSNumber *' when passing argument 1 of 'setContactId:' from distinct Objective-C type304982930#124#226#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m297926186#15#0#15#0#0"0(23@13"At top level:304982930#350#73#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m297926186#0#0#0#0#0"0(22@50"Incomplete implementation of class 'ContactRecord'304982930#423#122#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m297926186#20#0#20#0#38"incomplete implementation of class '*'0(22@64"Method definition for '-initWithName:description:url:' not found304982930#545#136#0(6@57"/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m297926186#20#0#20#0#35"method definition for '*' not found0(0#0#57"/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m8608713312#1981"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/ContactRecord.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContact.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982928.526938
+e304982928.792655
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContact.o
+x/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m304982928#304982928#0(0"0(0#0#60"/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m8609256064#1987"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContact.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContactController.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982928.792741
+e304982929.217937
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContactController.o
+x/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController readContactsFromDatabase]':
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: no '-initWithName:firstName:lastName:' method found
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: (Messages without a matching method signature
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: will be assumed to return 'id' and accept
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: '...' as arguments.)
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController readContactCategoriesByCategoryFromDatabase:]':
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:206: warning: no '-initWithName:firstName:lastName:' method found
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController showPersonById:]':
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:274: warning: initialization discards qualifiers from pointer target type
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:277: warning: class 'EmergencyContactController' does not implement the 'ABPersonViewControllerDelegate' protocol
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:283: warning: invalid receiver type 'ABRecordRef*'
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController tableView:cellForRowAtIndexPath:]':
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:570: warning: unused variable 'currContactId'
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:567: warning: unused variable 'row'
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController tableView:willSelectRowAtIndexPath:]':
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:594: warning: initialization makes pointer from integer without a cast
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:597: warning: passing argument 1 of 'showPersonById:' makes integer from pointer without a cast
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController tableView:titleForHeaderInSection:]':
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:603: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:607: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: At top level:
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:27: warning: 'deleteStmt' defined but not used
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:28: warning: 'addStmt' defined but not used
+lSLF07#2@78"Compile /Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m304982928#304982929#0(3195"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController readContactsFromDatabase]':/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: no '-initWithName:firstName:lastName:' method found/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: (Messages without a matching method signature/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: will be assumed to return 'id' and accept/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:132: warning: '...' as arguments.)/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController readContactCategoriesByCategoryFromDatabase:]':/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:206: warning: no '-initWithName:firstName:lastName:' method found/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController showPersonById:]':/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:274: warning: initialization discards qualifiers from pointer target type/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:277: warning: class 'EmergencyContactController' does not implement the 'ABPersonViewControllerDelegate' protocol/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:283: warning: invalid receiver type 'ABRecordRef*'/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController tableView:cellForRowAtIndexPath:]':/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:570: warning: unused variable 'currContactId'/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:567: warning: unused variable 'row'/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController tableView:willSelectRowAtIndexPath:]':/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:594: warning: initialization makes pointer from integer without a cast/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:597: warning: passing argument 1 of 'showPersonById:' makes integer from pointer without a cast/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: In function '-[EmergencyContactController tableView:titleForHeaderInSection:]':/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:603: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:607: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m: At top level:/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:27: warning: 'deleteStmt' defined but not used/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m:28: warning: 'addStmt' defined but not used15(22@51"No '-initWithName:firstName:lastName:' method found304982928#142#137#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#132#0#132#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)304982928#279#131#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#132#0#132#0#0"0(22@51"No '-initWithName:firstName:lastName:' method found304982928#805#137#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#206#0#206#0#19"no '*' method found0(22@59"Initialization discards qualifiers from pointer target type304982928#1075#145#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#274#0#274#0#0"0(22@99"Class 'EmergencyContactController' does not implement the 'ABPersonViewControllerDelegate' protocol304982928#1220#185#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#277#0#277#0#45"class '*' does not implement the '*' protocol0(22@36"Invalid receiver type 'ABRecordRef*'304982928#1405#122#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#283#0#283#0#0"0(22@31"Unused variable 'currContactId'304982929#1677#117#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#570#0#570#0#19"unused variable '*'0(22@21"Unused variable 'row'304982929#1794#107#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#567#0#567#0#19"unused variable '*'0(22@56"Initialization makes pointer from integer without a cast304982929#2054#142#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#594#0#594#0#0"0(22@81"Passing argument 1 of 'showPersonById:' makes integer from pointer without a cast304982929#2196#167#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#597#0#597#0#67"passing argument * of '*' makes integer from pointer without a cast0(22@96"Incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'304982929#2515#182#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#603#0#603#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@93"Incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'304982929#2697#179#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#607#0#607#0#0"0(23@13"At top level:304982929#2876#86#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#0#0#0#0#0"0(22@33"'deleteStmt' defined but not used304982929#2962#118#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#27#0#27#0#24"'*' defined but not used0(22@30"'addStmt' defined but not used304982929#3080#115#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m298776293#28#0#28#0#24"'*' defined but not used0(0#0#70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m8613613696#2007"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyContactController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyIDAppDelegate.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982925.985654
+e304982926.294843
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyIDAppDelegate.o
+x/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m304982925#304982926#0(0"0(0#0#66"/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m8609545184#1999"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyIDAppDelegate.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdDetailViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982927.150565
+e304982927.629144
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdDetailViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m304982927#304982927#0(0"0(0#0#73"/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m8604035808#2013"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdDetailViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdTableViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982926.836791
+e304982927.150481
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdTableViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:16:
+o/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h:21:1: warning: "kNumberOfEditableRows" redefined
+oIn file included from /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:15:
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.h:17:1: warning: this is the location of the previous definition
+o/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:189: warning: property 'medicalIdTableView' requires method '-medicalIdTableView' to be defined - use @synthesize, @dynamic or provide a method implementation
+o/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:189: warning: property 'medicalIdTableView' requires the method 'setMedicalIdTableView:' to be defined - use @synthesize, @dynamic or provide a method implementation
+lSLF07#2@80"Compile /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m304982926#304982927#0(921"In file included from /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:16:/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h:21:1: warning: "kNumberOfEditableRows" redefinedIn file included from /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:15:/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.h:17:1: warning: this is the location of the previous definition/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:189: warning: property 'medicalIdTableView' requires method '-medicalIdTableView' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m:189: warning: property 'medicalIdTableView' requires the method 'setMedicalIdTableView:' to be defined - use @synthesize, @dynamic or provide a method implementation4(22@33""kNumberOfEditableRows" redefined304982927#99#120#2(7@94"In file included from /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m304982927#18446744073709551615#0#0(6@72"/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m296936383#16#0#16#0#0"0(13@107""kNumberOfEditableRows" redefined in /Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h304982927#18446744073709551615#0#0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h298185018#21#0#21#0#0"0(6@70"/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h298185018#21#0#21#0#13""*" redefined0(22@47"This is the location of the previous definition304982927#318#132#2(7@94"In file included from /Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m304982927#18446744073709551615#0#0(6@72"/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m296936383#15#0#15#0#0"0(13@119"This is the location of the previous definition in /Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.h304982927#18446744073709551615#0#0(6@68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.h293844628#17#0#17#0#0"0(6@68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.h293844628#17#0#17#0#47"this is the location of the previous definition0(22@144"Property 'medicalIdTableView' requires method '-medicalIdTableView' to be defined - use @synthesize, @dynamic or provide a method implementation304982927#450#232#0(6@72"/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m296936383#189#0#189#0#0"0(22@151"Property 'medicalIdTableView' requires the method 'setMedicalIdTableView:' to be defined - use @synthesize, @dynamic or provide a method implementation304982927#682#239#0(6@72"/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m296936383#189#0#189#0#0"0(0#0#72"/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m8607442560#2011"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdTableViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982926.593507
+e304982926.836710
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@75"Compile /Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m304982926#304982926#0(0"0(0#0#67"/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m8612559392#2001"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/MedicalIdViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/MedicalIdViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalDetailController.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982927.879568
+e304982928.218115
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalDetailController.o
+x/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m: In function '-[PersonalDetailController save:]':
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:84: warning: incompatible Objective-C types initializing 'struct UITableView *', expected 'struct UIViewController *'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:84: warning: unused variable 'parentViewController'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m: In function '-[PersonalDetailController tableView:titleForHeaderInSection:]':
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:276: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:277: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'
+lSLF07#2@76"Compile /Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m304982927#304982928#0(932"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m: In function '-[PersonalDetailController save:]':/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:84: warning: incompatible Objective-C types initializing 'struct UITableView *', expected 'struct UIViewController *'/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:84: warning: unused variable 'parentViewController'/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m: In function '-[PersonalDetailController tableView:titleForHeaderInSection:]':/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:276: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m:277: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'4(22@104"Incompatible Objective-C types initializing 'struct UITableView *', expected 'struct UIViewController *'304982928#119#187#0(6@68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m293850825#84#0#84#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@38"Unused variable 'parentViewController'304982928#306#121#0(6@68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m293850825#84#0#84#0#19"unused variable '*'0(22@96"Incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'304982928#575#180#0(6@68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m293850825#276#0#276#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@93"Incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'304982928#755#177#0(6@68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m293850825#277#0#277#0#0"0(0#0#68"/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m8612376640#2003"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalDetailController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalInformation.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982928.218238
+e304982928.526856
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalInformation.o
+x/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m304982928#304982928#0(0"0(0#0#63"/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m8605881504#1993"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalInformation.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalViewController.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982929.593899
+e304982930.421601
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: In function '-[PersonalViewController tableView:numberOfRowsInSection:]':
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:331: warning: control reaches end of non-void function
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: In function '-[PersonalViewController tableView:titleForHeaderInSection:]':
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:347: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:349: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:351: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:353: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:355: warning: control reaches end of non-void function
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: In function '-[PersonalViewController tableView:didSelectRowAtIndexPath:]':
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:360: warning: unused variable 'row'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: At top level:
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:383: warning: incomplete implementation of class 'PersonalViewController'
+o/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:383: warning: method definition for '-textFieldDone:' not found
+lSLF07#2@74"Compile /Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m304982929#304982930#0(1834"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: In function '-[PersonalViewController tableView:numberOfRowsInSection:]':/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:331: warning: control reaches end of non-void function/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: In function '-[PersonalViewController tableView:titleForHeaderInSection:]':/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:347: warning: incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:349: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:351: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:353: warning: incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:355: warning: control reaches end of non-void function/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: In function '-[PersonalViewController tableView:didSelectRowAtIndexPath:]':/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:360: warning: unused variable 'row'/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m: At top level:/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:383: warning: incomplete implementation of class 'PersonalViewController'/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m:383: warning: method definition for '-textFieldDone:' not found10(22@40"Control reaches end of non-void function304982930#142#122#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#331#0#331#0#40"control reaches end of non-void function0(22@96"Incompatible Objective-C types initializing 'struct NSString *', expected 'struct NSIndexPath *'304982930#408#178#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#347#0#347#0#61"incompatible Objective-C types initializing '*', expected '*'0(22@93"Incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'304982930#586#175#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#349#0#349#0#0"0(22@93"Incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'304982930#761#175#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#351#0#351#0#0"0(22@93"Incompatible Objective-C types returning 'struct NSString *', expected 'struct NSIndexPath *'304982930#936#175#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#353#0#353#0#0"0(22@40"Control reaches end of non-void function304982930#1111#122#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#355#0#355#0#40"control reaches end of non-void function0(22@21"Unused variable 'row'304982930#1377#103#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#360#0#360#0#19"unused variable '*'0(23@13"At top level:304982930#1480#82#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#0#0#0#0#0"0(22@59"Incomplete implementation of class 'PersonalViewController'304982930#1562#141#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#383#0#383#0#38"incomplete implementation of class '*'0(22@49"Method definition for '-textFieldDone:' not found304982930#1703#131#0(6@66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m296945479#383#0#383#0#35"method definition for '*' not found0(0#0#66"/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m8609410144#1999"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/PersonalViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SecondLevelViewController.o" "/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982927.629384
+e304982927.879483
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SecondLevelViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@77"Compile /Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m304982927#304982927#0(0"0(0#0#69"/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m8612957120#2005"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SecondLevelViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SettingsViewController.o" "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982926.294921
+e304982926.593426
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SettingsViewController.o
+x/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m304982926#304982926#0(0"0(0#0#66"/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m8608223808#1999"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/SettingsViewController.o"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/main.o" "/Users/roy/Documents/Emergency ID/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982925.757886
+e304982925.985572
+r1
+xCompileC
+xbuild/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/main.o
+x/Users/roy/Documents/Emergency ID/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@48"Compile /Users/roy/Documents/Emergency ID/main.m304982925#304982925#0(0"0(0#0#40"/Users/roy/Documents/Emergency ID/main.m8613507328#1955"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -include /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch -c "/Users/roy/Documents/Emergency ID/main.m" -o "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/CameraViewController.xib"
+s304982921.752588
+e304982922.599051
+r1
+xCompileXIB
+x/Users/roy/Documents/Emergency ID/CameraViewController.xib
+lSLF07#2@35"CompileXIB CameraViewController.xib304982921#304982922#0(0"0(0#0#58"/Users/roy/Documents/Emergency ID/CameraViewController.xib8607359968#585"    cd "/Users/roy/Documents/Emergency ID"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/CameraViewController.nib" "/Users/roy/Documents/Emergency ID/CameraViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib"
+s304982920.990254
+e304982921.752516
+r1
+xCompileXIB
+x/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib
+lSLF07#2@52"CompileXIB Classes/MedicalIdDetailViewController.xib304982920#304982921#0(0"0(0#0#75"/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib8606836672#611"    cd "/Users/roy/Documents/Emergency ID"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/MedicalIdDetailViewController.nib" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdDetailViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib"
+s304982919.394177
+e304982920.279711
+r1
+xCompileXIB
+x/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib
+lSLF07#2@45"CompileXIB Classes/SettingsViewController.xib304982919#304982920#0(0"0(0#0#68"/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib8614236896#597"    cd "/Users/roy/Documents/Emergency ID"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/SettingsViewController.nib" "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/MainWindow.xib"
+s304982917.572842
+e304982919.389243
+r1
+xCompileXIB
+x/Users/roy/Documents/Emergency ID/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib304982917#304982919#0(0"0(0#0#48"/Users/roy/Documents/Emergency ID/MainWindow.xib8613073696#565"    cd "/Users/roy/Documents/Emergency ID"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/MainWindow.nib" "/Users/roy/Documents/Emergency ID/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCompileXIB "/Users/roy/Documents/Emergency ID/MedicalIdView.xib"
+s304982920.279824
+e304982920.990099
+r1
+xCompileXIB
+x/Users/roy/Documents/Emergency ID/MedicalIdView.xib
+lSLF07#2@28"CompileXIB MedicalIdView.xib304982920#304982920#0(0"0(0#0#51"/Users/roy/Documents/Emergency ID/MedicalIdView.xib8600337216#571"    cd "/Users/roy/Documents/Emergency ID"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/MedicalIdView.nib" "/Users/roy/Documents/Emergency ID/MedicalIdView.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CCpResource build/Debug-iphonesimulator/EmergencyID.app/10-medical.png 10-medical.png
+s304982919.391398
+e304982919.425445
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/EmergencyID.app/10-medical.png
+x10-medical.png
+lSLF07#2@19"Copy 10-medical.png304982919#304982919#0(0"0(0#0#48"/Users/roy/Documents/Emergency ID/10-medical.png8609329408#453"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/roy/Documents/Emergency ID/10-medical.png" "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"0#
+
+CCpResource build/Debug-iphonesimulator/EmergencyID.app/79-medical-bag.png 79-medical-bag.png
+s304982919.389390
+e304982919.423986
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/EmergencyID.app/79-medical-bag.png
+x79-medical-bag.png
+lSLF07#2@23"Copy 79-medical-bag.png304982919#304982919#0(0"0(0#0#52"/Users/roy/Documents/Emergency ID/79-medical-bag.png8614239264#457"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/roy/Documents/Emergency ID/79-medical-bag.png" "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"0#
+
+CCpResource build/Debug-iphonesimulator/EmergencyID.app/detailEditIcon.png detailEditIcon.png
+s304982922.599204
+e304982922.623245
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/EmergencyID.app/detailEditIcon.png
+xdetailEditIcon.png
+lSLF07#2@23"Copy detailEditIcon.png304982922#304982922#0(0"0(0#0#52"/Users/roy/Documents/Emergency ID/detailEditIcon.png8608944672#457"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/roy/Documents/Emergency ID/detailEditIcon.png" "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"0#
+
+CCpResource build/Debug-iphonesimulator/EmergencyID.app/emergencyid.sqlite3 emergencyid.sqlite3
+s304982922.600835
+e304982922.624923
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/EmergencyID.app/emergencyid.sqlite3
+xemergencyid.sqlite3
+lSLF07#2@24"Copy emergencyid.sqlite3304982922#304982922#0(0"0(0#0#53"/Users/roy/Documents/Emergency ID/emergencyid.sqlite38608490752#458"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks "/Users/roy/Documents/Emergency ID/emergencyid.sqlite3" "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"0#
+
+CGenerateDSYMFile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app.dSYM" "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID"
+s304982931.403583
+e304982931.564464
+r1
+xGenerateDSYMFile
+x/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app.dSYM
+x/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID
+lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/EmergencyID.app.dSYM build/Debug-iphonesimulator/EmergencyID.app/EmergencyID304982931#304982931#0(0"0(0#0#89"/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID8609481696#386"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID" -o "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app.dSYM"0#
+
+CLd "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID" normal i386
+s304982931.211305
+e304982931.403495
+r1
+xLd
+x/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID
+xnormal
+xi386
+lSLF07#2@94"Link /Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID304982931#304982931#0(0"0(0#0#0"8613186336#988"    cd "/Users/roy/Documents/Emergency ID"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk "-L/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" -filelist "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/Objects-normal/i386/EmergencyID.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework AVFoundation -framework AddressBook -framework AddressBookUI -lsqlite3 -o "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/EmergencyID"0#
+
+CProcessInfoPlistFile "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/Info.plist" EmergencyID-Info.plist
+s304982917.564341
+e304982917.572778
+r1
+xProcessInfoPlistFile
+x/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/Info.plist
+xEmergencyID-Info.plist
+lSLF07#2@30"Process EmergencyID-Info.plist304982917#304982917#0(0"0(0#0#56"/Users/roy/Documents/Emergency ID/EmergencyID-Info.plist7525630621066290176#482"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility EmergencyID-Info.plist -genpkginfo "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app/Info.plist"0#
+
+CProcessPCH /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch.gch EmergencyID_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s304982922.625030
+e304982925.757682
+r1
+xProcessPCH
+x/var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch.gch
+xEmergencyID_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@33"Precompile EmergencyID_Prefix.pch304982922#304982925#0(0"0(0#0#56"/Users/roy/Documents/Emergency ID/EmergencyID_Prefix.pch8599459712#1845"    cd "/Users/roy/Documents/Emergency ID"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-generated-files.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-own-target-headers.hmap" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-all-target-headers.hmap" -iquote "/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/EmergencyID-project-headers.hmap" "-F/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator" "-I/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/include" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources/i386" "-I/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphonesimulator/EmergencyID.build/DerivedSources" -c "/Users/roy/Documents/Emergency ID/EmergencyID_Prefix.pch" -o /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-djaoluwsolxysvcxwdpfdttutdzr/EmergencyID_Prefix.pch.gch0#
+
+CTouch "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"
+s304982931.564536
+e304982931.574472
+r1
+xTouch
+x/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app
+lSLF07#2@83"Touch /Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app304982931#304982931#0(0"0(0#0#0"8603452160#276"    cd "/Users/roy/Documents/Emergency ID"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/roy/Documents/Emergency ID/build/Debug-iphonesimulator/EmergencyID.app"0#
+

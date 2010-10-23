@@ -22,11 +22,9 @@
 @synthesize lastName;
 @synthesize contacts;
 @synthesize	contactCategories;
+@synthesize fileManager;
 
 static sqlite3 *database = nil;
-static sqlite3_stmt *deleteStmt = nil;
-static sqlite3_stmt *addStmt = nil;
-
 static sqlite3_stmt *stmt = nil;
 
 
@@ -53,14 +51,14 @@ static sqlite3_stmt *stmt = nil;
 	
 	// Create a FileManager object, we will use this to check the status
 	// of the database and to copy it over if required
-	NSFileManager *fileManager = [NSFileManager defaultManager];
+	fileManager = [NSFileManager defaultManager];
 	
 	// Check if the database has already been created in the users filesystem
 	success = [fileManager fileExistsAtPath:databasePath];
 	
 	// If the database already exists then return without doing anything
 	if(!success){
-	
+		
 		// If not then proceed to copy the database from the application to the users filesystem
 		
 		// Get the path to the database in the application package
@@ -85,6 +83,15 @@ static sqlite3_stmt *stmt = nil;
 	
 	char *errorMsg;
 	
+	//Create the table for contact if they do not exist
+	/*
+	 NSString *createSQL = @"DROP TABLE contact;";
+	 if(sqlite3_exec(database, [createSQL UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
+	 sqlite3_close(database);
+	 NSAssert1(0, @"Error creating table: %s", errorMsg);
+	 }
+	 */
+	
 	
 	//Create the table for contact if they do not exist
 	NSString *createSQL = @"CREATE TABLE IF NOT EXISTS contact ( contactId Integer PRIMARY KEY NOT NULL, contactCategoryId Integer NOT NULL, userId Integer NULL, firstName Varchar NULL, lastName Varchar NULL, phone Varchar NULL, image Varchar NULL);";
@@ -99,7 +106,47 @@ static sqlite3_stmt *stmt = nil;
 		sqlite3_close(database);
 		NSAssert1(0, @"Error creating table: %s", errorMsg);
 	}
-	 
+	
+	char *query1 = "INSERT OR REPLACE INTO contactCategory(contactCategoryId,title,rank,isReadOnly) VALUES (?, ?, ?, ?);";
+	
+	if(sqlite3_prepare_v2(database, query1	, -1, &stmt, nil) == SQLITE_OK) {
+		sqlite3_bind_int(stmt, 1, 1);
+		sqlite3_bind_text(stmt, 2, "Primary Contact",-1, NULL);
+		sqlite3_bind_int(stmt, 3, 1);
+		sqlite3_bind_int(stmt, 4, 1);
+		
+	}else{
+		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
+    }
+	
+	if(sqlite3_step(stmt) != SQLITE_DONE){
+		NSAssert1(0, @"Error while creating update statement. '%s'", sqlite3_errmsg(database));
+	}
+	
+	// Release the compiled statement from memory
+	sqlite3_reset(stmt);
+	
+	
+	char *query2 = "INSERT OR REPLACE INTO contactCategory(contactCategoryId,title,rank,isReadOnly) VALUES (?, ?, ?, ?);";
+	
+	if(sqlite3_prepare_v2(database, query2, -1, &stmt, nil) == SQLITE_OK) {
+		sqlite3_bind_int(stmt, 1, 2);
+		sqlite3_bind_text(stmt, 2, "Secondary Contact",-1,NULL);
+		sqlite3_bind_int(stmt, 3, 2);
+		sqlite3_bind_int(stmt, 4, 1);
+		
+	}else{
+		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
+    }
+	
+	if(sqlite3_step(stmt) != SQLITE_DONE){
+		NSAssert1(0, @"Error while creating update statement. '%s'", sqlite3_errmsg(database));
+	}
+	
+	
+	// Release the compiled statement from memory
+	sqlite3_reset(stmt);
+	
 }
 
 //close the database
@@ -117,9 +164,10 @@ static sqlite3_stmt *stmt = nil;
 	
 	// Init the animals Array
 	NSMutableArray *currContacts = [[NSMutableArray alloc] init];
-	
+	// Release the compiled statement from memory
+	sqlite3_reset(stmt);
 	// Setup the SQL Statement and compile it for faster access
-	char *query = "SELECT contactId,firstName,lastName FROM contact";
+	char *query = "SELECT contactId, firstName, lastName, phone FROM contact";
 	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
 		// Loop through the results and add them to the feeds array
 		while(sqlite3_step(stmt) == SQLITE_ROW) {
@@ -127,9 +175,12 @@ static sqlite3_stmt *stmt = nil;
 			NSNumber *aContactId = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];
 			NSString *aFirstName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
 			NSString *aLastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 2)];
+			//NSString *aPhoneNumber = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 3)];
+			NSString *aPhoneNumber = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 3)];
+			
 			
 			// Create a new contact object with the data from the database
-			ContactRecord *contact = [[ContactRecord alloc] initWithName:aContactId firstName:aFirstName lastName:aLastName];
+			ContactRecord *contact = [[ContactRecord alloc] initWithName: aContactId firstName:aFirstName lastName:aLastName primaryPhoneNumber:aPhoneNumber];
 			
 			// Add the animal object to the animals Array
 			[currContacts addObject:contact];
@@ -170,7 +221,7 @@ static sqlite3_stmt *stmt = nil;
 			// Add the animal object to the animals Array
 			[currContactCatgories addObject:category];
 			
-			[category release];
+			//[category release];
 		}
 	}else{
 		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
@@ -191,19 +242,20 @@ static sqlite3_stmt *stmt = nil;
 	// Setup the SQL Statement and compile it for faster access
 	//char *query = "SELECT contactId,firstName,lastName FROM contact WHERE contactCategoryId = '?'";
 	
-	const char *query = [[NSString stringWithFormat:@"SELECT contactId,firstName,lastName FROM contact WHERE contactCategoryId = '%@'",contactCategoryId] cStringUsingEncoding:NSUTF8StringEncoding];
+	const char *query = [[NSString stringWithFormat:@"SELECT contactId,firstName,lastName,phone FROM contact WHERE contactCategoryId = '%@'",contactCategoryId] cStringUsingEncoding:NSUTF8StringEncoding];
 	
 	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
-	
+		
 		// Loop through the results and add them to the feeds array
 		while(sqlite3_step(stmt) == SQLITE_ROW) {
 			// Read the data from the result row
 			NSNumber *aContactId = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];
 			NSString *aFirstName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 1)];
 			NSString *aLastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 2)];
+			NSString *aPhoneNumber = [NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 3)];
 			
 			// Create a new contact object with the data from the database
-			ContactRecord *contact = [[ContactRecord alloc] initWithName:aContactId firstName:aFirstName lastName:aLastName];
+			ContactRecord *contact = [[ContactRecord alloc] initWithName:aContactId firstName:aFirstName lastName:aLastName primaryPhoneNumber:aPhoneNumber];
 			
 			
 			// Add the animal object to the animals Array
@@ -221,9 +273,11 @@ static sqlite3_stmt *stmt = nil;
 }
 
 
--(IBAction)cancel:(id)sender{
-	[self closeDatabase];
-    [self.navigationController popViewControllerAnimated:YES];
+-(IBAction)cancelWindow:(id)sender{
+	//[self closeDatabase];
+    //[self.navigationController popViewControllerAnimated:YES];
+	
+	[self peoplePickerNavigationControllerDidCancel];
 }
 
 /**
@@ -232,13 +286,13 @@ static sqlite3_stmt *stmt = nil;
  */
 - (IBAction)addNew:(id)sender
 {
-/*
-	ABPeoplePickerNavigationController *picker =
-	[[ABPeoplePickerNavigationController alloc] init]; 
-	picker.peoplePickerDelegate = self;
-	[self presentModalViewController:picker animated:YES]; 
-	[picker release];
-*/
+	/*
+	 ABPeoplePickerNavigationController *picker =
+	 [[ABPeoplePickerNavigationController alloc] init]; 
+	 picker.peoplePickerDelegate = self;
+	 [self presentModalViewController:picker animated:YES]; 
+	 [picker release];
+	 */
 	
 	ABNewPersonViewController *view = [[ABNewPersonViewController alloc] init]; 
 	
@@ -267,25 +321,88 @@ static sqlite3_stmt *stmt = nil;
 	
 }
 
+
+
+- (IBAction)showPersonById:(NSUInteger)personRecordId{
+	
+	NSArray *currContact = [contacts objectAtIndex:personRecordId]; // can change index and it's fine
+	NSNumber *currContactId = [currContact valueForKey:@"contactId"]; // works fine
+	NSString *currFirstName = [currContact valueForKey:@"firstName"]; // works fine
+	NSString *currLastName = [currContact valueForKey:@"lastName"];
+	NSString *currPhoneNumber = [currContact valueForKey:@"primaryPhoneNumber"];
+	
+	ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+
+	ABRecordRef person = ABPersonCreate(); 
+	CFErrorRef anError = NULL;
+	ABRecordSetValue(person, kABPersonFirstNameProperty, currFirstName, &anError); 
+	ABRecordSetValue(person, kABPersonLastNameProperty, currLastName, &anError);
+
+	
+	ABMultiValueIdentifier *multivalueIdentifier; 
+	bool didAdd = ABMultiValueAddValueAndLabel(multi, currPhoneNumber,
+		 kABPersonPhoneMobileLabel, multivalueIdentifier); 
+	if (didAdd != YES) {/* Handle error here. */}
+	
+	ABRecordSetValue(person, kABPersonPhoneProperty, multi, &anError); if (anError != NULL) {/* Handle error here. */} 
+	CFRelease(multi);
+	
+	
+		
+		ABNewPersonViewController *view = [[ABNewPersonViewController alloc] init]; 
+		
+		view.newPersonViewDelegate = self;
+		view.displayedPerson = person; 
+		UINavigationController *newNavigationController = [UINavigationController alloc]; 
+		
+		[newNavigationController initWithRootViewController:view]; 
+		[self presentModalViewController:newNavigationController animated:YES]; 
+		
+		[view release];
+		[newNavigationController release];
+	
+	
+	[person release];
+	
+}
+
 /**
  * Save a new contact record that completed with a new person
  */
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{
+	
 	
 	ABRecordID personID = ABRecordGetRecordID(person);
 	NSNumber *personIDAsNumber = [NSNumber numberWithInt:personID];
 	NSString *currfirstName, *currlastName; 
 	currfirstName = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty); 
 	currlastName = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
+	//currPhoneNumber = (NSString *)ABRecordCopyValue(person, kABPerson);
 	
-	char *query = "INSERT OR REPLACE INTO contact(contactId,contactCategoryId,userId,firstName,lastName) VALUES (?, ?, ?, ?, ?);";
 	
-	if(sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
+	ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+	CFErrorRef anError = NULL;
+	
+	ABMultiValueIdentifier *multivalueIdentifier; 
+	CFStringRef phoneNumber, phoneNumberLabel;
+	
+	multi = ABRecordCopyValue(person, kABPersonPhoneProperty);
+	for (CFIndex i = 0; i < ABMultiValueGetCount(multi); i++) { 
+		phoneNumberLabel = ABMultiValueCopyLabelAtIndex(multi, i); 
+		phoneNumber	= ABMultiValueCopyValueAtIndex(multi, i);
+	}
+	
+	/* ... Do something with phoneNumberLabel and phoneNumber. ... */
+	
+	char *query = "INSERT OR REPLACE INTO contact(contactId,contactCategoryId,userId,firstName,lastName,phone) VALUES (?, ?, ?, ?, ?, ?);";
+	
+	if(sqlite3_prepare_v2(database, query	, -1, &stmt, nil) == SQLITE_OK) {
 		sqlite3_bind_int(stmt, 1, [personIDAsNumber intValue]);
 		sqlite3_bind_int(stmt, 2, 1);
 		sqlite3_bind_int(stmt, 3, 1);
 		sqlite3_bind_text(stmt, 4, [currfirstName UTF8String], -1, NULL);
 		sqlite3_bind_text(stmt, 5, [currlastName UTF8String], -1, NULL);
+		sqlite3_bind_text(stmt, 6, [phoneNumber UTF8String], -1, NULL);
 		
 	}else{
 		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
@@ -294,11 +411,20 @@ static sqlite3_stmt *stmt = nil;
 	if(sqlite3_step(stmt) != SQLITE_DONE){
 		NSAssert1(0, @"Error while creating update statement. '%s'", sqlite3_errmsg(database));
 	}
+	
+	CFRelease(phoneNumberLabel); 
+	CFRelease(phoneNumber);
+	
 	// Release the compiled statement from memory
 	sqlite3_reset(stmt);
 	
 	//load the new contacts into memory
 	[self readContactsFromDatabase];
+	
+	//reload the parent data
+	NSArray *allControllers = self.navigationController.viewControllers;
+    UITableViewController *parent = [allControllers lastObject];
+    [parent.tableView reloadData];
 	
 	[self dismissModalViewControllerAnimated:YES]; 
 }
@@ -306,10 +432,10 @@ static sqlite3_stmt *stmt = nil;
 /**
  CREATE TABLE contact(contactId INTEGER PRIMARY KEY, userId INTEGER,firstName VARCHAR(2000), lastName VARCHAR(2000), image VARCHAR(2000));
  sqlite> INSERT INTO contact(contactId, userId,firstName,lastName,image) VALUES (1,1,'Roy','Martin','test');
-*/
+ */
 
-- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
-	[self dismissModalViewControllerAnimated:NO];
+- (void)peoplePickerNavigationControllerDidCancel: (ABPeoplePickerNavigationController *)peoplePicker {
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (BOOL)peoplePickerNavigationController: (ABPeoplePickerNavigationController *)peoplePicker
@@ -319,6 +445,7 @@ static sqlite3_stmt *stmt = nil;
 	name = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty); 
 	
 	self.lastName.text = name;
+	
 	
 	[name release]; 
 	[self dismissModalViewControllerAnimated:YES]; 
@@ -371,45 +498,23 @@ static sqlite3_stmt *stmt = nil;
         }
     }
     /*
-	NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc]
-                                 initForWritingWithMutableData:data];
-	
-    [archiver encodeObject:emergencycontact forKey:kContactDataKey];
-    [archiver finishEncoding];
-    [data writeToFile:[self dataFilePath] atomically:YES];
-    [archiver release];
-    [data release];    
-	*/
+	 NSMutableData *data = [[NSMutableData alloc] init];
+	 NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc]
+	 initForWritingWithMutableData:data];
+	 
+	 [archiver encodeObject:emergencycontact forKey:kContactDataKey];
+	 [archiver finishEncoding];
+	 [data writeToFile:[self dataFilePath] atomically:YES];
+	 [archiver release];
+	 [data release];    
+	 */
 	[self closeDatabase];
-		
+	
     [self.navigationController popViewControllerAnimated:YES];
     
     NSArray *allControllers = self.navigationController.viewControllers;
     UITableViewController *parent = [allControllers lastObject];
     [parent.tableView reloadData];
-}
-
--(IBAction)textFieldDone:(id)sender {
-    UITableViewCell *cell =
-    (UITableViewCell *)[[sender superview] superview];
-    UITableView *table = (UITableView *)[cell superview];
-    NSIndexPath *textFieldIndexPath = [table indexPathForCell:cell];
-    NSUInteger row = [textFieldIndexPath row];
-    row++;
-    if (row >= kNumberOfEditableRows)
-        row = 0;
-    NSUInteger newIndex[] = {0, row};
-    NSIndexPath *newPath = [[NSIndexPath alloc] initWithIndexes:newIndex 
-                                                         length:2];
-    UITableViewCell *nextCell = [self.tableView 
-                                 cellForRowAtIndexPath:newPath];
-    UITextField *nextField = nil;
-    for (UIView *oneView in nextCell.contentView.subviews) {
-        if ([oneView isMemberOfClass:[UITextField class]])
-            nextField = (UITextField *)oneView;
-    }
-    [nextField becomeFirstResponder];
 }
 
 #pragma mark -
@@ -440,25 +545,18 @@ static sqlite3_stmt *stmt = nil;
 	
 	
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-                                     initWithTitle:@"Cancel"
+                                     initWithTitle:@"EID"
                                      style:UIBarButtonItemStylePlain
                                      target:self
-                                     action:@selector(cancel:)];
-    self.navigationItem.leftBarButtonItem = cancelButton;
+                                     action:@selector(cancelWindow:)];
+	self.navigationItem.leftBarButtonItem = cancelButton;
     [cancelButton release];
     
-	/*
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Save" 
-                                   style:UIBarButtonItemStyleDone
-                                   target:self
-                                   action:@selector(save:)];
-	*/
 	
 	UIBarButtonItem *newButton = [[UIBarButtonItem alloc]
-initWithTitle:@"Add New"
-style:UIBarButtonItemStyleDone
-target:self
+								  initWithTitle:@"Add New"
+								  style:UIBarButtonItemStyleDone
+								  target:self
 								  action:@selector(addNew:)];
 	
     self.navigationItem.rightBarButtonItem = newButton;
@@ -481,6 +579,7 @@ target:self
     
     [super dealloc];
 }
+
 #pragma mark -
 #pragma mark Table Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView 
@@ -510,13 +609,9 @@ target:self
 	
 	[self readContactCategoriesByCategoryFromDatabase:currCatCategoryId];
 	
-	
-	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                              PersonalCellIdentifier];
-	
-	
-		
+
     if (cell == nil) {
         
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
@@ -526,7 +621,7 @@ target:self
         label.textAlignment = UITextAlignmentRight;
         label.tag = kLabelTag;
         label.font = [UIFont boldSystemFontOfSize:14];
-      //  [cell.contentView addSubview:label];
+		//  [cell.contentView addSubview:label];
         [label release];
         
         
@@ -537,9 +632,9 @@ target:self
         [textField addTarget:self 
                       action:@selector(textFieldDone:) 
             forControlEvents:UIControlEventEditingDidEndOnExit];
-    //    [cell.contentView addSubview:textField];
+		//    [cell.contentView addSubview:textField];
 		
-	
+		
     }
 	
 	
@@ -550,31 +645,36 @@ target:self
     
 	NSUInteger row = [indexPath row];
 	
-	NSArray *currContact = [contacts objectAtIndex:section]; // can change index and it's fine
-	NSNumber *currContactId = [currContact valueForKey:@"contactId"]; // works fine
+	NSArray *currContact = [contacts objectAtIndex:row]; // can change index and it's fine
+	//NSNumber *currContactId = [currContact valueForKey:@"contactId"]; // works fine
 	NSString *currFirstName = [currContact valueForKey:@"firstName"]; // works fine
 	NSString *currLastName = [currContact valueForKey:@"lastName"];
+	NSString *currPhoneNumber = [currContact valueForKey:@"primaryPhoneNumber"];
 	
 	cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", currFirstName, currLastName];
-	cell.detailTextLabel.text = @"555-555-5555";
-	    
-    
+	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",currPhoneNumber];
+	
 	return cell;
 }
 #pragma mark -
 #pragma mark Table View Data Source Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 	return [self.contactCategories count];
-	//return [self.contacts count];
-	
-	//return 0;
 }
 
 #pragma mark -
 #pragma mark Table Delegate Methods
 - (NSIndexPath *)tableView:(UITableView *)tableView 
   willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-   
+	
+	
+	NSUInteger row = [indexPath row];
+	
+	
+	
+	//load a person record
+	[self showPersonById:row];
+	
 	return nil;
 }
 
@@ -591,6 +691,7 @@ target:self
 {
     self.textFieldBeingEdited = textField;
 }
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSNumber *tagAsNum = [[NSNumber alloc] initWithInt:textField.tag];
