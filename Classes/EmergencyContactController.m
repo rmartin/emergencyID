@@ -283,7 +283,7 @@ static sqlite3_stmt *stmt = nil;
 }
 
 /**
- * UI: close the window for the picker
+ * UI: close the window for the picker (EID Button on listing page)
  */
 -(IBAction)cancelWindow:(id)sender{
 	//[self closeDatabase];
@@ -307,13 +307,6 @@ static sqlite3_stmt *stmt = nil;
  */
 - (IBAction)addNew:(id)sender
 {
-	/*
-	 ABPeoplePickerNavigationController *picker =
-	 [[ABPeoplePickerNavigationController alloc] init]; 
-	 picker.peoplePickerDelegate = self;
-	 [self presentModalViewController:picker animated:YES]; 
-	 [picker release];
-	 */
 	
 	ABNewPersonViewController *view = [[ABNewPersonViewController alloc] init]; 
 	
@@ -321,7 +314,7 @@ static sqlite3_stmt *stmt = nil;
 	UINavigationController *newNavigationController = [UINavigationController alloc]; 
 	
 	[newNavigationController initWithRootViewController:view]; 
-	[self presentModalViewController:newNavigationController animated:YES]; 
+	[self presentModalViewController:newNavigationController animated:YES]; 	
 	
 	[view release];
 	[newNavigationController release];
@@ -392,6 +385,14 @@ static sqlite3_stmt *stmt = nil;
  * Objective-C: Save a new contact record that completed with a new person
  */
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{
+	
+	//if it was a cancel, then exit
+	if(person == nil){
+		[self dismissModalViewControllerAnimated:YES];
+		return;
+	}
+	
+	
 	
 	ABRecordID personID = ABRecordGetRecordID(person);
 	NSNumber *personIDAsNumber = [NSNumber numberWithInt:personID];
@@ -583,7 +584,7 @@ static sqlite3_stmt *stmt = nil;
 	
 	
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-                                     initWithTitle:@"EID"
+                                     initWithTitle:@"Home"
                                      style:UIBarButtonItemStylePlain
                                      target:self
                                      action:@selector(cancelWindow:)];
