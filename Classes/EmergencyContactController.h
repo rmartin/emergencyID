@@ -46,6 +46,8 @@
 	NSMutableArray *contacts;
 	NSMutableArray *contactCategories;
 	
+	NSNumber *currPersonRecordId;
+	
 }
 
 @property (nonatomic, retain) UILabel * firstName;
@@ -59,6 +61,8 @@
 
 @property (nonatomic, retain) NSMutableArray *contacts;
 @property (nonatomic, retain) NSMutableArray *contactCategories;
+
+@property (nonatomic, retain) NSNumber	*currPersonRecordId;
 
 - (IBAction)showPicker:(id)sender;
 - (IBAction)addNew:(id)sender;

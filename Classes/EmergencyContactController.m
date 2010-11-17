@@ -23,6 +23,7 @@
 @synthesize contacts;
 @synthesize	contactCategories;
 @synthesize fileManager;
+@synthesize currPersonRecordId;
 
 static sqlite3 *database = nil;
 static sqlite3_stmt *stmt = nil;
@@ -158,6 +159,10 @@ static sqlite3_stmt *stmt = nil;
 	sqlite3_close(database);
 }
 
+
+/**
+ * SQL: Select all contacts from the database
+ */
 -(void) readContactsFromDatabase {
 	// Setup the database object
 	//sqlite3 *database;
@@ -196,7 +201,9 @@ static sqlite3_stmt *stmt = nil;
 	self.contacts = currContacts;
 }
 
-
+/**
+ * SQL: Load the individual categories from the database
+ */
 -(void) readContactCategoriesFromDatabase {
 	// Setup the database object
 	//sqlite3 *database;
@@ -232,6 +239,9 @@ static sqlite3_stmt *stmt = nil;
 	self.contactCategories = currContactCatgories;
 }
 
+/**
+ * SQL / Objective-C: Load in all the records into the database
+ */
 -(void) readContactCategoriesByCategoryFromDatabase:(NSString *)contactCategoryId{
 	// Setup the database object
 	//sqlite3 *database;
@@ -272,17 +282,28 @@ static sqlite3_stmt *stmt = nil;
 	self.contacts = currContacts;
 }
 
-
+/**
+ * UI: close the window for the picker
+ */
 -(IBAction)cancelWindow:(id)sender{
 	//[self closeDatabase];
-    //[self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 	
-	[self peoplePickerNavigationControllerDidCancel];
+	//[self peoplePickerNavigationControllerDidCancel];
 }
 
 /**
- * Opens a add new contact view and presents this to the user
- *
+ * UI: close the window for the picker
+ */
+-(IBAction)cancel:(id)sender{
+	//[self closeDatabase];
+    [self.navigationController popViewControllerAnimated:YES];
+	
+	//[self peoplePickerNavigationControllerDidCancel];
+}
+
+/**
+ * UI: Opens a add new contact view and presents this to the user
  */
 - (IBAction)addNew:(id)sender
 {
@@ -308,7 +329,7 @@ static sqlite3_stmt *stmt = nil;
 }
 
 /**
- * Opens a existing contact selector to grab contacts that already exist
+ * UI: Opens a existing contact selector to grab contacts that already exist
  */
 - (IBAction)showPicker:(id)sender { 
 	
@@ -322,7 +343,9 @@ static sqlite3_stmt *stmt = nil;
 }
 
 
-
+/**
+ * UI: Show an individual contact record
+ */
 - (IBAction)showPersonById:(NSUInteger)personRecordId{
 	
 	NSArray *currContact = [contacts objectAtIndex:personRecordId]; // can change index and it's fine
@@ -331,7 +354,7 @@ static sqlite3_stmt *stmt = nil;
 	NSString *currLastName = [currContact valueForKey:@"lastName"];
 	NSString *currPhoneNumber = [currContact valueForKey:@"primaryPhoneNumber"];
 	
-	ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+	//ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
 
 	ABRecordRef person = ABPersonCreate(); 
 	CFErrorRef anError = NULL;
@@ -339,14 +362,11 @@ static sqlite3_stmt *stmt = nil;
 	ABRecordSetValue(person, kABPersonLastNameProperty, currLastName, &anError);
 
 	
-	ABMultiValueIdentifier *multivalueIdentifier; 
-	bool didAdd = ABMultiValueAddValueAndLabel(multi, currPhoneNumber,
-		 kABPersonPhoneMobileLabel, multivalueIdentifier); 
-	if (didAdd != YES) {/* Handle error here. */}
-	
-	ABRecordSetValue(person, kABPersonPhoneProperty, multi, &anError); if (anError != NULL) {/* Handle error here. */} 
-	CFRelease(multi);
-	
+	//ABMultiValueIdentifier *multivalueIdentifier; 
+	ABMutableMultiValueRef multiPhone = ABMultiValueCreateMutable(kABMultiStringPropertyType);
+	ABMultiValueAddValueAndLabel(multiPhone, currPhoneNumber, kABPersonPhoneMainLabel, NULL);
+	ABRecordSetValue(person, kABPersonPhoneProperty, multiPhone,nil);
+	CFRelease(multiPhone);
 	
 		
 		ABNewPersonViewController *view = [[ABNewPersonViewController alloc] init]; 
@@ -362,28 +382,27 @@ static sqlite3_stmt *stmt = nil;
 		[newNavigationController release];
 	
 	
-	[person release];
+	//[person release];
+	
+	self.currPersonRecordId = currContactId;
 	
 }
 
 /**
- * Save a new contact record that completed with a new person
+ * Objective-C: Save a new contact record that completed with a new person
  */
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person{
-	
 	
 	ABRecordID personID = ABRecordGetRecordID(person);
 	NSNumber *personIDAsNumber = [NSNumber numberWithInt:personID];
 	NSString *currfirstName, *currlastName; 
+	int currPersonId = [personIDAsNumber intValue];
 	currfirstName = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty); 
 	currlastName = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
-	//currPhoneNumber = (NSString *)ABRecordCopyValue(person, kABPerson);
 	
-	
+
 	ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-	CFErrorRef anError = NULL;
 	
-	ABMultiValueIdentifier *multivalueIdentifier; 
 	CFStringRef phoneNumber, phoneNumberLabel;
 	
 	multi = ABRecordCopyValue(person, kABPersonPhoneProperty);
@@ -392,12 +411,14 @@ static sqlite3_stmt *stmt = nil;
 		phoneNumber	= ABMultiValueCopyValueAtIndex(multi, i);
 	}
 	
+	
 	/* ... Do something with phoneNumberLabel and phoneNumber. ... */
 	
-	char *query = "INSERT OR REPLACE INTO contact(contactId,contactCategoryId,userId,firstName,lastName,phone) VALUES (?, ?, ?, ?, ?, ?);";
+	char *query = "INSERT OR REPLACE INTO contact(contactId,contactCategoryId,userId,firstName,lastName, phone) VALUES (?, ?, ?, ?, ?, ?);";
 	
 	if(sqlite3_prepare_v2(database, query	, -1, &stmt, nil) == SQLITE_OK) {
-		sqlite3_bind_int(stmt, 1, [personIDAsNumber intValue]);
+		//sqlite3_bind_int(stmt, 1, [personIDAsNumber intValue]);
+		sqlite3_bind_int(stmt, 1, [self.currPersonRecordId intValue]);
 		sqlite3_bind_int(stmt, 2, 1);
 		sqlite3_bind_int(stmt, 3, 1);
 		sqlite3_bind_text(stmt, 4, [currfirstName UTF8String], -1, NULL);
@@ -434,10 +455,16 @@ static sqlite3_stmt *stmt = nil;
  sqlite> INSERT INTO contact(contactId, userId,firstName,lastName,image) VALUES (1,1,'Roy','Martin','test');
  */
 
+/**
+ * UI: Cancel the person picker
+ */
 - (void)peoplePickerNavigationControllerDidCancel: (ABPeoplePickerNavigationController *)peoplePicker {
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+/**
+ * UI: Show the user after a selection has been made
+ */
 - (BOOL)peoplePickerNavigationController: (ABPeoplePickerNavigationController *)peoplePicker
 	  shouldContinueAfterSelectingPerson:(ABRecordRef)person {
 	NSString* name = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
@@ -453,10 +480,17 @@ static sqlite3_stmt *stmt = nil;
 	return NO;
 }
 
+/**
+ * UI: Show the user after a selection has been made by name, id
+ */
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier{
     return NO;
 }
 
+
+/**
+ * Objective-C: Save the individual record 
+ */
 - (IBAction)save:(id)sender
 {
     if (textFieldBeingEdited != nil)
@@ -508,7 +542,7 @@ static sqlite3_stmt *stmt = nil;
 	 [archiver release];
 	 [data release];    
 	 */
-	[self closeDatabase];
+	//[self closeDatabase];
 	
     [self.navigationController popViewControllerAnimated:YES];
     
@@ -517,6 +551,10 @@ static sqlite3_stmt *stmt = nil;
     [parent.tableView reloadData];
 }
 
+
+/**
+ * UI: Load the main display for the list of users
+ */
 #pragma mark -
 - (void)viewDidLoad {
     
@@ -567,6 +605,10 @@ static sqlite3_stmt *stmt = nil;
     [dict release];
     [super viewDidLoad];
 }
+
+/**
+ * Objective-C: dealloc all variables for the class 
+ */
 - (void)dealloc {
 	
 	
@@ -580,6 +622,9 @@ static sqlite3_stmt *stmt = nil;
     [super dealloc];
 }
 
+/**
+ * UI: Determine the number of rows for each category 
+ */ 
 #pragma mark -
 #pragma mark Table Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView 
@@ -595,6 +640,10 @@ static sqlite3_stmt *stmt = nil;
     return [self.contacts count];
 }
 
+
+/**
+ * UI: Display list of contacts
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -656,12 +705,19 @@ static sqlite3_stmt *stmt = nil;
 	
 	return cell;
 }
+
+/**
+ * UI: determine the number of categories to display
+ */
 #pragma mark -
 #pragma mark Table View Data Source Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 	return [self.contactCategories count];
 }
 
+/**
+ * UI: User selection of a contact record
+ */
 #pragma mark -
 #pragma mark Table Delegate Methods
 - (NSIndexPath *)tableView:(UITableView *)tableView 
@@ -678,24 +734,46 @@ static sqlite3_stmt *stmt = nil;
 	return nil;
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView 
-   titleForHeaderInSection:(NSInteger)section {
+/**
+ * UI: setup the header for each of the categories
+ */
+- (NSString *)tableView:(UITableView *)tableView 
+titleForHeaderInSection:(NSInteger)section {
 	NSArray *currContactCategory = [contactCategories objectAtIndex:section]; // can change index and it's fine
 	NSString *currCatTitle = [currContactCategory valueForKey:@"title"]; // works fine
 	
 	return currCatTitle;
 }
 
+/**
+ * UI: MARKED FOR DELETION: setup each text field for editing
+ */
 #pragma mark Text Field Delegate Methods
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.textFieldBeingEdited = textField;
 }
 
+
+/**
+ * UI: MARKED FOR DELETION: callback for finished editing a row
+ */
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     NSNumber *tagAsNum = [[NSNumber alloc] initWithInt:textField.tag];
     [tempValues setObject:textField.text forKey:tagAsNum];
     [tagAsNum release];
 }
+
+
+/**
+ * UI: MARKED FOR DELETION: callback for finished editing a row
+ */
+- (void)textFieldDone:(UITextField *)textField
+{
+    NSNumber *tagAsNum = [[NSNumber alloc] initWithInt:textField.tag];
+    [tempValues setObject:textField.text forKey:tagAsNum];
+    [tagAsNum release];
+}
+
 @end
