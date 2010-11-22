@@ -15,14 +15,11 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		B02B41FB1172FE7200D88231 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02B41F91172FE7200D88231 /* SettingsViewController.m */; };
 		B02B41FC1172FE7200D88231 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02B41FA1172FE7200D88231 /* SettingsViewController.xib */; };
-		B02B42161173019400D88231 /* MedicalIdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02B42141173019400D88231 /* MedicalIdViewController.m */; };
 		B02B421A1173028600D88231 /* MedicalIdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02B42191173028600D88231 /* MedicalIdTableViewController.m */; };
 		B02B428C1173090100D88231 /* MedicalIdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02B428B1173090000D88231 /* MedicalIdView.xib */; };
 		B02B429B11730BA000D88231 /* MedicalIdDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02B429A11730BA000D88231 /* MedicalIdDetailViewController.xib */; };
-		B03E88601173237D001352FD /* MedicalIdDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03E885F1173237D001352FD /* MedicalIdDetailViewController.m */; };
 		B067D05711C5F03400A9AF9B /* ContactCategoryRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B067D05611C5F03400A9AF9B /* ContactCategoryRecord.m */; };
 		B068D6A811B2E4D500C71D6F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B068D6A711B2E4D500C71D6F /* AVFoundation.framework */; };
-		B098773111B2F8FB00C25D73 /* ContactPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B098773011B2F8FB00C25D73 /* ContactPicker.m */; };
 		B098779D11B2FF4F00C25D73 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B098779C11B2FF4F00C25D73 /* AddressBook.framework */; };
 		B09877AB11B3002A00C25D73 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09877AA11B3002A00C25D73 /* AddressBookUI.framework */; };
 		B09ADEDD117B9932002D0624 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B09ADEDC117B9932002D0624 /* PersonalViewController.m */; };
@@ -34,7 +31,6 @@
 		B0EB69D711732610006F17B8 /* SecondLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69D611732610006F17B8 /* SecondLevelViewController.m */; };
 		B0EB69DC11732622006F17B8 /* PersonalDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69D911732622006F17B8 /* PersonalDetailController.m */; };
 		B0EB69DD11732622006F17B8 /* PersonalInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69DA11732622006F17B8 /* PersonalInformation.m */; };
-		B0EB69E21173262D006F17B8 /* EmergencyContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69E01173262D006F17B8 /* EmergencyContact.m */; };
 		B0EB69E31173262D006F17B8 /* EmergencyContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69E11173262D006F17B8 /* EmergencyContactController.m */; };
 		B0EB69E611732631006F17B8 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EB69E411732631006F17B8 /* CameraViewController.m */; };
 		B0EB69E811732644006F17B8 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EB69E711732644006F17B8 /* CameraViewController.xib */; };
@@ -55,20 +51,14 @@
 		B02B41F81172FE7200D88231 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		B02B41F91172FE7200D88231 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		B02B41FA1172FE7200D88231 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Classes/SettingsViewController.xib; sourceTree = "<group>"; };
-		B02B42131173019400D88231 /* MedicalIdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalIdViewController.h; sourceTree = "<group>"; };
-		B02B42141173019400D88231 /* MedicalIdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalIdViewController.m; sourceTree = "<group>"; };
 		B02B42181173028600D88231 /* MedicalIdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalIdTableViewController.h; sourceTree = "<group>"; };
 		B02B42191173028600D88231 /* MedicalIdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalIdTableViewController.m; sourceTree = "<group>"; };
 		B02B428B1173090000D88231 /* MedicalIdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalIdView.xib; sourceTree = "<group>"; };
 		B02B429A11730BA000D88231 /* MedicalIdDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MedicalIdDetailViewController.xib; path = Classes/MedicalIdDetailViewController.xib; sourceTree = "<group>"; };
-		B03E885E1173237D001352FD /* MedicalIdDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalIdDetailViewController.h; sourceTree = "<group>"; };
-		B03E885F1173237D001352FD /* MedicalIdDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalIdDetailViewController.m; sourceTree = "<group>"; };
 		B067D05411C5EDF600A9AF9B /* databaseScripts.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = databaseScripts.sql; sourceTree = "<group>"; };
 		B067D05511C5F03400A9AF9B /* ContactCategoryRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactCategoryRecord.h; sourceTree = "<group>"; };
 		B067D05611C5F03400A9AF9B /* ContactCategoryRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactCategoryRecord.m; sourceTree = "<group>"; };
 		B068D6A711B2E4D500C71D6F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B098772F11B2F8FB00C25D73 /* ContactPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPicker.h; sourceTree = "<group>"; };
-		B098773011B2F8FB00C25D73 /* ContactPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPicker.m; sourceTree = "<group>"; };
 		B098779C11B2FF4F00C25D73 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = /System/Library/Frameworks/AddressBook.framework; sourceTree = "<absolute>"; };
 		B09877AA11B3002A00C25D73 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		B09ADEDB117B9932002D0624 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
@@ -85,9 +75,7 @@
 		B0EB69D911732622006F17B8 /* PersonalDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetailController.m; sourceTree = "<group>"; };
 		B0EB69DA11732622006F17B8 /* PersonalInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInformation.m; sourceTree = "<group>"; };
 		B0EB69DB11732622006F17B8 /* PersonalDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailController.h; sourceTree = "<group>"; };
-		B0EB69DE1173262D006F17B8 /* EmergencyContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContact.h; sourceTree = "<group>"; };
 		B0EB69DF1173262D006F17B8 /* EmergencyContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmergencyContactController.h; sourceTree = "<group>"; };
-		B0EB69E01173262D006F17B8 /* EmergencyContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContact.m; sourceTree = "<group>"; };
 		B0EB69E11173262D006F17B8 /* EmergencyContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmergencyContactController.m; sourceTree = "<group>"; wrapsLines = 0; };
 		B0EB69E411732631006F17B8 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		B0EB69E511732631006F17B8 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
@@ -116,36 +104,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* EmergencyIDAppDelegate.h */,
-				1D3623250D0F684500981E51 /* EmergencyIDAppDelegate.m */,
-				B02B42181173028600D88231 /* MedicalIdTableViewController.h */,
-				B02B42191173028600D88231 /* MedicalIdTableViewController.m */,
-				B09ADEDB117B9932002D0624 /* PersonalViewController.h */,
-				B09ADEDC117B9932002D0624 /* PersonalViewController.m */,
-				B0EB69DB11732622006F17B8 /* PersonalDetailController.h */,
-				B0EB69D911732622006F17B8 /* PersonalDetailController.m */,
-				B0EB69DE1173262D006F17B8 /* EmergencyContact.h */,
-				B0EB69E01173262D006F17B8 /* EmergencyContact.m */,
-				B0EB69DF1173262D006F17B8 /* EmergencyContactController.h */,
-				B0EB69E11173262D006F17B8 /* EmergencyContactController.m */,
-				B02B41F81172FE7200D88231 /* SettingsViewController.h */,
-				B02B41F91172FE7200D88231 /* SettingsViewController.m */,
-				B0EB69E411732631006F17B8 /* CameraViewController.m */,
-				B0EB69E511732631006F17B8 /* CameraViewController.h */,
-				B0EB69D511732610006F17B8 /* SecondLevelViewController.h */,
-				B0EB69D611732610006F17B8 /* SecondLevelViewController.m */,
-				B0EB69D811732622006F17B8 /* PersonalInformation.h */,
-				B0EB69DA11732622006F17B8 /* PersonalInformation.m */,
-				B02B42131173019400D88231 /* MedicalIdViewController.h */,
-				B02B42141173019400D88231 /* MedicalIdViewController.m */,
-				B03E885E1173237D001352FD /* MedicalIdDetailViewController.h */,
-				B03E885F1173237D001352FD /* MedicalIdDetailViewController.m */,
-				B098772F11B2F8FB00C25D73 /* ContactPicker.h */,
-				B098773011B2F8FB00C25D73 /* ContactPicker.m */,
-				B09ECCB811B533A300F84A1D /* ContactRecord.h */,
-				B09ECCB911B533A300F84A1D /* ContactRecord.m */,
-				B067D05511C5F03400A9AF9B /* ContactCategoryRecord.h */,
-				B067D05611C5F03400A9AF9B /* ContactCategoryRecord.m */,
+				B08132E1129A3A8D0097C73A /* Wallpaper */,
+				B08132E0129A3A820097C73A /* Settings */,
+				B08132B7129A38C20097C73A /* Personal */,
+				B08132B6129A38A80097C73A /* UI */,
+				B08132A4129A35FE0097C73A /* Contact */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,6 +172,63 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B08132A4129A35FE0097C73A /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				B0EB69DF1173262D006F17B8 /* EmergencyContactController.h */,
+				B09ECCB811B533A300F84A1D /* ContactRecord.h */,
+				B067D05511C5F03400A9AF9B /* ContactCategoryRecord.h */,
+				B067D05611C5F03400A9AF9B /* ContactCategoryRecord.m */,
+				B09ECCB911B533A300F84A1D /* ContactRecord.m */,
+				B0EB69E11173262D006F17B8 /* EmergencyContactController.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		B08132B6129A38A80097C73A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B0EB69D511732610006F17B8 /* SecondLevelViewController.h */,
+				B0EB69D611732610006F17B8 /* SecondLevelViewController.m */,
+				B02B42181173028600D88231 /* MedicalIdTableViewController.h */,
+				1D3623240D0F684500981E51 /* EmergencyIDAppDelegate.h */,
+				1D3623250D0F684500981E51 /* EmergencyIDAppDelegate.m */,
+				B02B42191173028600D88231 /* MedicalIdTableViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B08132B7129A38C20097C73A /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				B0EB69D811732622006F17B8 /* PersonalInformation.h */,
+				B0EB69DA11732622006F17B8 /* PersonalInformation.m */,
+				B09ADEDB117B9932002D0624 /* PersonalViewController.h */,
+				B09ADEDC117B9932002D0624 /* PersonalViewController.m */,
+				B0EB69DB11732622006F17B8 /* PersonalDetailController.h */,
+				B0EB69D911732622006F17B8 /* PersonalDetailController.m */,
+			);
+			name = Personal;
+			sourceTree = "<group>";
+		};
+		B08132E0129A3A820097C73A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B02B41F81172FE7200D88231 /* SettingsViewController.h */,
+				B02B41F91172FE7200D88231 /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		B08132E1129A3A8D0097C73A /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				B0EB69E411732631006F17B8 /* CameraViewController.m */,
+				B0EB69E511732631006F17B8 /* CameraViewController.h */,
+			);
+			name = Wallpaper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,17 +295,13 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* EmergencyIDAppDelegate.m in Sources */,
 				B02B41FB1172FE7200D88231 /* SettingsViewController.m in Sources */,
-				B02B42161173019400D88231 /* MedicalIdViewController.m in Sources */,
 				B02B421A1173028600D88231 /* MedicalIdTableViewController.m in Sources */,
-				B03E88601173237D001352FD /* MedicalIdDetailViewController.m in Sources */,
 				B0EB69D711732610006F17B8 /* SecondLevelViewController.m in Sources */,
 				B0EB69DC11732622006F17B8 /* PersonalDetailController.m in Sources */,
 				B0EB69DD11732622006F17B8 /* PersonalInformation.m in Sources */,
-				B0EB69E21173262D006F17B8 /* EmergencyContact.m in Sources */,
 				B0EB69E31173262D006F17B8 /* EmergencyContactController.m in Sources */,
 				B0EB69E611732631006F17B8 /* CameraViewController.m in Sources */,
 				B09ADEDD117B9932002D0624 /* PersonalViewController.m in Sources */,
-				B098773111B2F8FB00C25D73 /* ContactPicker.m in Sources */,
 				B09ECCBA11B533A300F84A1D /* ContactRecord.m in Sources */,
 				B067D05711C5F03400A9AF9B /* ContactCategoryRecord.m in Sources */,
 			);

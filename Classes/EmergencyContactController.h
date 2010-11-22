@@ -13,7 +13,7 @@
 #import <sqlite3.h> // Import the SQLite database framework
 
 
-@class EmergencyContact; 
+//@class EmergencyContact; 
 
 #define kDatabasename        @"emergencyid.sqlite3"
 #define kContactDataKey         @"Contact"
@@ -30,7 +30,7 @@
 
 #define kLabelTag                    4096
 @interface EmergencyContactController : SecondLevelViewController <UITextFieldDelegate,ABPeoplePickerNavigationControllerDelegate,ABNewPersonViewControllerDelegate> {
-    EmergencyContact *emergencycontact;
+//    EmergencyContact *emergencycontact;
     NSArray *fieldLabels;
     NSMutableDictionary *tempValues;
     UITextField *textFieldBeingEdited;   
@@ -45,14 +45,13 @@
 	// Array to store the animal objects
 	NSMutableArray *contacts;
 	NSMutableArray *contactCategories;
-	
+		
 	NSNumber *currPersonRecordId;
-	
 }
 
 @property (nonatomic, retain) UILabel * firstName;
 @property (nonatomic, retain) UILabel *lastName;
-@property (nonatomic, retain) EmergencyContact *emergencycontact;
+//@property (nonatomic, retain) EmergencyContact *emergencycontact;
 @property (nonatomic, retain) NSArray *fieldLabels;
 @property (nonatomic, retain) NSMutableDictionary *tempValues;
 @property (nonatomic, retain) UITextField *textFieldBeingEdited;
