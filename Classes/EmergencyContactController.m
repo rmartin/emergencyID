@@ -96,14 +96,14 @@ static sqlite3_stmt *stmt = nil;
 	
 	
 	//Create the table for contact if they do not exist
-	NSString *createSQL = @"CREATE TABLE IF NOT EXISTS contact ( contactId Integer PRIMARY KEY NOT NULL, contactCategoryId Integer NOT NULL, userId Integer NULL, firstName Varchar NULL, lastName Varchar NULL, phone Varchar NULL, image Varchar NULL, rank NOT NULL DEFAULT '0');";
+	NSString *createSQL = @"CREATE TABLE IF NOT EXISTS contact ( contactId Integer PRIMARY KEY NOT NULL, contactCategoryId Integer NOT NULL, userId Integer NULL, firstName Varchar NULL, lastName Varchar NULL, phone Varchar NULL, image Varchar NULL, rank NOT NULL DEFAULT '99');";
 	if(sqlite3_exec(database, [createSQL UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
 		sqlite3_close(database);
 		NSAssert1(0, @"Error creating table: %s", errorMsg);
 	}
 	
 	//Create the table for contact category if they do not exist
-	createSQL = @"CREATE TABLE IF NOT EXISTS contactCategory (contactCategoryId Integer PRIMARY KEY NOT NULL, title varchar NOT NULL, rank Integer NOT NULL DEFAULT '0', isReadOnly Integer NOT NULL DEFAULT '0');";
+	createSQL = @"CREATE TABLE IF NOT EXISTS contactCategory (contactCategoryId Integer PRIMARY KEY NOT NULL, title varchar NOT NULL, rank Integer NOT NULL DEFAULT '0', isReadOnly Integer NOT NULL DEFAULT '99');";
 	if(sqlite3_exec(database, [createSQL UTF8String], NULL, NULL, &errorMsg) != SQLITE_OK){
 		sqlite3_close(database);
 		NSAssert1(0, @"Error creating table: %s", errorMsg);
@@ -754,6 +754,7 @@ static sqlite3_stmt *stmt = nil;
 	
 	cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", currFirstName, currLastName];
 	cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",currPhoneNumber];
+	cell.hidesAccessoryWhenEditing = YES;
 	
 	return cell;
 }
@@ -763,7 +764,18 @@ static sqlite3_stmt *stmt = nil;
  */
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
 		   editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return UITableViewCellEditingStyleNone;
+	
+	
+	NSInteger section = [indexPath section];
+	NSInteger row = [indexPath row];
+	
+	NSArray *currContactArray = contactsArray[section][0];
+	
+	if(row == ([currContactArray count]-1)){
+			return UITableViewCellEditingStyleInsert;
+	}else{
+		return UITableViewCellEditingStyleDelete;
+	}
 }
 
 - (BOOL)tableView:(UITableView *)tableView
@@ -795,13 +807,43 @@ moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
 	NSArray *currContactCategory = [contactCategories objectAtIndex:fromSection]; // can change index and it's fine
 	NSString *currCatCategoryId = [currContactCategory valueForKey:@"contactCategoryId"]; // works fine
 	
-	[self readContactCategoriesByCategoryFromDatabase:currCatCategoryId forSectionId:fromSection];
+	//get the current category
+	NSArray *destContactCategory = [contactCategories objectAtIndex:toSection]; // can change index and it's fine
+	NSString *destCatCategoryId = [destContactCategory valueForKey:@"contactCategoryId"]; // works fine
+	
+	//[self readContactCategoriesByCategoryFromDatabase:currCatCategoryId forSectionId:fromSection];
 	NSArray *currContacts = contactsArray[fromSection][0];
 	
 	NSArray *currContact = [currContacts objectAtIndex:fromRow]; // can change index and it's fine
 	NSNumber *contactId = [currContact valueForKey:@"contactId"];
 	
-	NSNumber *contactId2 = [currContact valueForKey:@"contactId"];
+	char *query = "UPDATE contact SET contactCategoryId = ?, rank = ? WHERE contactId = ?";
+	
+	if(sqlite3_prepare_v2(database, query	, -1, &stmt, nil) == SQLITE_OK) {
+		sqlite3_bind_int(stmt, 1, [destCatCategoryId intValue]);
+		sqlite3_bind_int(stmt, 2, toRow);
+		sqlite3_bind_int(stmt, 3, [contactId intValue]);
+	}else{
+		NSLog(@"Error while creating update statement.: %s\n", sqlite3_errmsg(database));  
+	}
+	
+	if(sqlite3_step(stmt) != SQLITE_DONE){
+		NSAssert1(0, @"Error while creating update statement. '%s'", sqlite3_errmsg(database));
+	}
+	
+	sqlite3_reset(stmt);
+	
+}
+
+#pragma mark -
+#pragma mark Table View Data Source Methods
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath{
+	NSUInteger row = [indexPath row];
+	
+	[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	
 }
 
 

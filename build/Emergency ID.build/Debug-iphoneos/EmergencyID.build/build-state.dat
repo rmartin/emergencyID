@@ -129,16 +129,16 @@ s1652
 i"ContactPicker.h"
 
 N/Users/roy/Documents/Emergency ID/Classes/ContactRecord.h
-c000000004C04FD310000000000000223
-t1275395377
-s547
+c000000004CE8674600000000000003E3
+t1290299206
+s995
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m
-c000000004C11C6AA00000000000001AD
-t1276233386
-s429
+c000000004CE86BDC00000000000002E2
+t1290300380
+s738
 i"ContactRecord.h"
 
 N/Users/roy/Documents/Emergency ID/Classes/EmergencyContact.h
@@ -154,9 +154,9 @@ s2651
 i"EmergencyContact.h"
 
 N/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.h
-c000000004C15B9BA0000000000000838
-t1276492218
-s2104
+c000000004CEA028C00000000000008D6
+t1290404492
+s2262
 i<uiKit/UIKit.h>
 i<AddressBook/AddressBook.h>
 i<AddressBookUI/AddressBookUI.h>
@@ -164,11 +164,10 @@ i"SecondLevelViewController.h"
 i<sqlite3.h>
 
 N/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m
-c000000004C1EBF650000000000005473
-t1277083493
-s21619
+c000000004CEBE2410000000000007A75
+t1290527297
+s31349
 i"EmergencyContactController.h"
-i"EmergencyContact.h"
 i"ContactRecord.h"
 i"ContactCategoryRecord.h"
 
@@ -267,9 +266,9 @@ i<UIKit/UIKit.h>
 i"SecondLevelViewController.h"
 
 N/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m
-c000000004C02CFC70000000000002E62
-t1275252679
-s11874
+c000000004C83FE760000000000002E68
+t1283718774
+s11880
 i"PersonalViewController.h"
 i"PersonalInformation.h"
 i"PersonalDetailController.h"
@@ -382,6 +381,59 @@ N/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/emergenc
 t1276932396
 s8192
 
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/CameraViewController.o
+t1272532731
+s59424
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/ContactCategoryRecord.o
+t1276932398
+s11848
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/ContactRecord.o
+t1276932398
+s10348
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/EmergencyContactController.o
+t1276932397
+s91916
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/EmergencyID.LinkFileList
+c000000004C1C712B0000000000000887
+t1276932395
+s2183
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/EmergencyIDAppDelegate.o
+t1272532729
+s44416
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/MedicalIdTableViewController.o
+t1276932396
+s44756
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/PersonalDetailController.o
+t1272532730
+s65688
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/PersonalInformation.o
+t1272532731
+s29352
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/PersonalViewController.o
+t1276932397
+s76684
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/SecondLevelViewController.o
+t1272532730
+s29572
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/SettingsViewController.o
+t1276932396
+s42200
+
+N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/main.o
+t1272532728
+s6544
+
 N/Users/roy/Documents/Emergency ID/build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv7/CameraViewController.o
 t2
 s0
@@ -457,8 +509,8 @@ t1240433153
 s3245
 
 N/Users/roy/Documents/Emergency ID/emergencyid.sqlite3
-c000000004C15B8380000000000002000
-t1276491832
+c000000004C8404D10000000000002000
+t1283720401
 s8192
 
 N/Users/roy/Documents/Emergency ID/main.m
@@ -466,6 +518,10 @@ c000000004BC29C990000000000000171
 t1271045273
 s369
 i<UIKit/UIKit.h>
+
+N/var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-bzxtrdmiiifbnlexmqqxmnyecyqu/EmergencyID_Prefix.pch.gch
+t2
+s0
 
 N/var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-cetmxghsnicslsduklskxsiwydlv/EmergencyID_Prefix.pch.gch
 t2
@@ -478,7 +534,43 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies304982906#304982906#0(184"[BEROR]Code Sign error: Provisioning profile 'A297CAAB-7618-424E-A100-8720A9994BDA' can't be found[BWARN]warning: building for deployment target '4.0' requires an armv6 architecture.2(4@91"Code Sign error: Provisioning profile 'A297CAAB-7618-424E-A100-8720A9994BDA' can't be found304982906#18446744073709551615#0#0(1@0"0(22@77"warning: building for deployment target '4.0' requires an armv6 architecture.304982906#18446744073709551615#0#0(1@0"0(0#1#0"32651522506817640#0"0#
+lSLF07#2@18"Check dependencies312220813#312220813#0(99"[BEROR]Code Sign error: Provisioning profile 'A297CAAB-7618-424E-A100-8720A9994BDA' can't be found1(4@91"Code Sign error: Provisioning profile 'A297CAAB-7618-424E-A100-8720A9994BDA' can't be found312220813#18446744073709551615#0#0(1@0"0(0#1#0"8626077824#0"0#
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/CameraViewController.o" "/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/ContactCategoryRecord.o" "/Users/roy/Documents/Emergency ID/Classes/ContactCategoryRecord.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/ContactRecord.o" "/Users/roy/Documents/Emergency ID/Classes/ContactRecord.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/EmergencyContactController.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyContactController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/EmergencyIDAppDelegate.o" "/Users/roy/Documents/Emergency ID/Classes/EmergencyIDAppDelegate.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/MedicalIdTableViewController.o" "/Users/roy/Documents/Emergency ID/Classes/MedicalIdTableViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/PersonalDetailController.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalDetailController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/PersonalInformation.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalInformation.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/PersonalViewController.o" "/Users/roy/Documents/Emergency ID/Classes/PersonalViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/SecondLevelViewController.o" "/Users/roy/Documents/Emergency ID/Classes/SecondLevelViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/SettingsViewController.o" "/Users/roy/Documents/Emergency ID/Classes/SettingsViewController.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv6/main.o" "/Users/roy/Documents/Emergency ID/main.m" normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CCompileC "build/Emergency ID.build/Debug-iphoneos/EmergencyID.build/Objects-normal/armv7/CameraViewController.o" "/Users/roy/Documents/Emergency ID/Classes/CameraViewController.m" normal armv7 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -561,10 +653,16 @@ r0
 CGenerateDSYMFile "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app.dSYM" "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/EmergencyID"
 r0
 
+CLd "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/EmergencyID" normal armv6
+r0
+
 CLd "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/EmergencyID" normal armv7
 r0
 
 CProcessInfoPlistFile "/Users/roy/Documents/Emergency ID/build/Debug-iphoneos/EmergencyID.app/Info.plist" EmergencyID-Info.plist
+r0
+
+CProcessPCH /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-bzxtrdmiiifbnlexmqqxmnyecyqu/EmergencyID_Prefix.pch.gch EmergencyID_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
 r0
 
 CProcessPCH /var/folders/aS/aSzu+lgvEDe28VgBB2U2+E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/EmergencyID_Prefix-cetmxghsnicslsduklskxsiwydlv/EmergencyID_Prefix.pch.gch EmergencyID_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
